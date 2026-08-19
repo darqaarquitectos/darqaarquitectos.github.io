@@ -1,0 +1,16 @@
+DARQA ARQUITECTOS — WEB FORMAL DE PRUEBA V2
+
+Esta versión incorpora una navegación más editorial y elegante:
+- Transición visual breve al cambiar entre páginas.
+- Desplazamiento controlado y más lento hacia las secciones internas.
+- Efecto de entrada suave al llegar a una sección.
+- Respeto por la preferencia de movimiento reducido del navegador.
+- Se conserva el contenido, fotografías, proyectos, directora y logos aprobados de la versión anterior.
+
+Para probar:
+1. Descomprimir la carpeta.
+2. Abrir index.html en el navegador.
+3. Probar NOSOTROS, SERVICIOS, PROYECTOS, DIRECTORA, EXPERIENCIA y CONTACTO.
+4. Entrar a un proyecto y regresar al menú INICIO.
+
+Versión: V2 — Navegación editorial

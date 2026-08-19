@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DARQA Arquitectos — Arquitectura, Proyectos y Gestión</title>
+<meta content="Arquitectura, proyectos y gestión para espacios residenciales y comerciales." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--yellow:#ffc400;--black:#0b0b0c;--graphite:#171719;--soft:#a8a8ad;--white:#f7f7f5;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.6}.demo{position:fixed;z-index:1000;top:0;left:0;right:0;background:var(--yellow);color:#111;text-align:center;font-size:12px;font-weight:700;letter-spacing:.08em;padding:7px 12px;text-transform:uppercase}.demo span{font-weight:500;letter-spacing:0;text-transform:none;margin-left:8px}.nav{position:fixed;top:34px;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:18px 5vw;background:linear-gradient(180deg,rgba(0,0,0,.88),rgba(0,0,0,0));transition:.3s}.nav.scrolled{background:rgba(10,10,11,.92);backdrop-filter:blur(14px)}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}.brand img{width:48px;height:48px;object-fit:cover}.brand b{font-family:Montserrat,sans-serif;font-size:20px;letter-spacing:.18em;font-weight:500}.brand small{display:block;color:#aaa;font-size:8px;letter-spacing:.2em;margin-top:-2px}.navlinks{display:flex;gap:28px}.navlinks a{color:#eee;text-decoration:none;font-size:12px;letter-spacing:.12em;text-transform:uppercase}.navlinks a:hover{color:var(--yellow)}.menu{display:none;border:0;background:none;color:white;font-size:26px}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;position:relative;overflow:hidden}.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:160px 7vw 100px;position:relative;z-index:2}.eyebrow{color:var(--yellow);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:20px}.hero h1{font-family:Montserrat,sans-serif;font-size:clamp(48px,7vw,100px);line-height:.92;font-weight:500;letter-spacing:-.055em;margin:0 0 28px}.hero h1 em{font-style:normal;color:var(--yellow)}.hero p{max-width:600px;color:#c4c4c7;font-size:18px;font-weight:300}.actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}.btn{padding:13px 20px;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:700;border:1px solid #fff;color:#fff;transition:.25s}.btn.primary{background:var(--yellow);border-color:var(--yellow);color:#111}.btn:hover{transform:translateY(-2px)}.hero-image{position:relative;min-height:100vh;background:url('https://images.pexels.com/photos/17779247/pexels-photo-17779247.jpeg?auto=compress&cs=tinysrgb&w=2400') center/cover}.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--black) 0%,rgba(11,11,12,.3) 35%,rgba(11,11,12,.1) 100%),linear-gradient(0deg,rgba(0,0,0,.4),transparent 50%)}.hero-tag{position:absolute;right:5vw;bottom:7vh;z-index:3;border-left:3px solid var(--yellow);padding-left:15px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#ddd}
+.section{padding:110px 7vw}.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:52px}.kicker{font-size:11px;color:var(--yellow);letter-spacing:.22em;text-transform:uppercase;font-weight:700}.section h2{font-family:Montserrat,sans-serif;font-size:clamp(34px,5vw,68px);line-height:1;margin:8px 0 0;font-weight:500;letter-spacing:-.04em}.section-head p{max-width:430px;color:#a9a9ad;font-weight:300}.about{background:#f2f1ed;color:#111}.about .section-head p{color:#555}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.about-copy{font-size:18px;max-width:680px}.about-copy strong{font-weight:600}.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#d5d4d0;margin-top:35px}.fact{background:#f2f1ed;padding:22px}.fact b{display:block;font-family:Montserrat;font-size:28px}.fact span{font-size:11px;color:#666;text-transform:uppercase;letter-spacing:.12em}.portrait{min-height:600px;background:url('https://images.pexels.com/photos/11894196/pexels-photo-11894196.jpeg?auto=compress&cs=tinysrgb&w=2400') center/cover;filter:grayscale(100%)}
+.services{background:var(--graphite)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}.service{padding:32px 25px 38px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:190px}.service:nth-child(3n){border-right:0}.num{color:var(--yellow);font-size:11px;letter-spacing:.16em}.service h3{font-family:Montserrat;font-size:25px;font-weight:500;margin:35px 0 10px}.service p{color:#999;font-size:14px;margin:0}
+.projects{background:#0d0d0e}.project-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.project{position:relative;aspect-ratio:1.25;overflow:hidden;cursor:pointer;background:#222}.project img{width:100%;height:100%;object-fit:cover;transition:.6s}.project:hover img{transform:scale(1.07)}.project:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent 55%);opacity:.9}.project-info{position:absolute;left:18px;right:15px;bottom:16px;z-index:2}.project-info span{font-size:9px;color:var(--yellow);letter-spacing:.18em;text-transform:uppercase}.project-info h3{font-family:Montserrat;font-size:18px;font-weight:500;margin:4px 0}.project-info p{font-size:11px;color:#cfcfcf;margin:0}.note{margin-top:22px;padding:12px 15px;border:1px dashed rgba(255,196,0,.45);color:#a9a9ad;font-size:11px}.note b{color:var(--yellow)}
+.experience{background:#f2f1ed;color:#111}.experience .section-head p{color:#555}.logos{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#d5d4d0}.logo-box{background:#f2f1ed;min-height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;font-family:Montserrat;font-size:17px;font-weight:600;letter-spacing:-.02em;color:#262626;text-align:center;padding:24px}.logo-box img{width:150px;height:90px;object-fit:contain;display:block}.logo-box.logo-square img{width:110px;height:105px}.logo-box.logo-wide img{width:175px;height:90px}.logo-box span{opacity:.55}.logo-box.other .dots{font-size:30px;letter-spacing:8px;line-height:1;color:#222}.timeline{margin-top:55px;display:grid;grid-template-columns:1fr 2fr;gap:50px}.timeline-item{border-top:1px solid #ccc;padding:20px 0}.timeline-item b{font-size:12px;letter-spacing:.12em}.timeline-item h3{font-family:Montserrat;font-size:24px;margin:5px 0}.timeline-item p{color:#555;margin:0}
+.contact{min-height:70vh;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;background:linear-gradient(135deg,#111 0%,#1b1b1d 100%)}.contact h2{font-size:clamp(45px,7vw,90px);max-width:650px}.contact-info{border-left:1px solid #444;padding-left:35px}.contact-item{margin:0 0 28px}.contact-item small{display:block;color:var(--yellow);text-transform:uppercase;letter-spacing:.16em;font-size:10px}.contact-item a,.contact-item div{color:#eee;text-decoration:none;font-size:18px}.footer{padding:28px 7vw;border-top:1px solid #222;color:#777;font-size:11px;display:flex;justify-content:space-between;gap:20px}.footer b{color:#bbb}.modal{position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(10px);z-index:2000;display:none;align-items:center;justify-content:center;padding:30px}.modal.open{display:flex}.modal-card{max-width:950px;width:100%;background:#171719;display:grid;grid-template-columns:1fr 1fr;border:1px solid #333}.modal-card img{width:100%;height:100%;min-height:420px;object-fit:cover}.modal-copy{padding:38px}.modal-copy .close{float:right;background:none;border:0;color:#fff;font-size:25px;cursor:pointer}.modal-copy h2{font-family:Montserrat;font-size:38px;font-weight:500}.modal-copy p{color:#aaa}.modal-copy .meta{border-top:1px solid #333;padding-top:18px;margin-top:25px;color:#ddd;font-size:12px}.modal-copy .meta span{color:var(--yellow)}
+@media(max-width:900px){.navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(10,10,11,.98);border-top:1px solid #333;padding:8px 5vw 14px}.navlinks.mobile-open{display:flex}.navlinks>a{padding:12px 0;border-bottom:1px solid #292929}.navlinks .nav-projects{padding:8px 0}.menu{display:block}.hero{grid-template-columns:1fr}.hero-image{position:absolute;inset:0;opacity:.48}.hero-copy{padding-top:180px}.hero-copy:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.35));z-index:-1}.about-grid,.contact,.timeline{grid-template-columns:1fr}.portrait{min-height:450px}.service-grid{grid-template-columns:1fr 1fr}.service:nth-child(3n){border-right:1px solid var(--line)}.service:nth-child(2n){border-right:0}.project-grid{grid-template-columns:repeat(2,1fr)}.logos{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.section{padding:75px 5vw}.brand b{font-size:16px}.hero h1{font-size:54px}.service-grid,.project-grid{grid-template-columns:1fr}.service{border-right:0!important}.logos{grid-template-columns:1fr}.footer{flex-direction:column}.modal-card{grid-template-columns:1fr}.modal-card img{min-height:250px}.nav{padding-left:5vw;padding-right:5vw}}
+
+/* ===== DARQA DEMO V2 — visual refinement ===== */
+:root{
+  --yellow:#ffc400;
+  --yellow-soft:#ffd84d;
+  --ink:#080809;
+  --graphite:#151517;
+}
+body{letter-spacing:.005em}
+.nav{border-bottom:1px solid transparent}
+.nav.scrolled{box-shadow:0 8px 40px rgba(0,0,0,.28)}
+.hero{min-height:calc(100vh - 0px)}
+.hero-copy{padding-top:175px}
+.hero h1{max-width:850px}
+.hero-image:after{
+  content:"DARQA";
+  position:absolute;right:-2vw;bottom:3vh;
+  font-size:clamp(90px,15vw,220px);line-height:.7;
+  font-weight:700;letter-spacing:-.08em;color:rgba(255,255,255,.035);
+  pointer-events:none
+}
+.section{position:relative}
+.section:before{
+  content:"";position:absolute;left:0;top:0;width:72px;height:2px;background:var(--yellow);
+}
+.about{background:linear-gradient(180deg,#f5f4ef,#ecebe6)}
+.about .section-head h2,.services .section-head h2,.projects .section-head h2,
+.experience .section-head h2{letter-spacing:-.06em}
+.service-grid{box-shadow:0 30px 80px rgba(0,0,0,.16)}
+.service{transition:transform .35s,background .35s}
+.service:hover{transform:translateY(-5px);background:#171719}
+.project{transition:transform .35s,box-shadow .35s}
+.project:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(0,0,0,.18)}
+.logos{gap:1px;background:rgba(255,255,255,.08)}
+.logo-box{transition:.3s;position:relative}
+.logo-box:hover{background:rgba(255,196,0,.06);color:#fff}
+.demo-person{
+  display:grid;grid-template-columns:.72fr 1.28fr;gap:70px;align-items:center;
+  margin-top:100px;padding:55px;background:#111;border:1px solid rgba(255,255,255,.08)
+}
+.demo-person-photo{position:relative}
+.demo-person-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1);transition:.6s}
+.demo-person-photo:after{content:"";position:absolute;left:18px;bottom:18px;width:100%;height:100%;border:1px solid var(--yellow);z-index:0}
+.demo-person-photo img{position:relative;z-index:1}
+.demo-person-copy h3{font-size:clamp(38px,4vw,64px);line-height:.9;letter-spacing:-.055em;font-weight:500;margin:14px 0 22px}
+.demo-person-copy p{color:#aaa;max-width:650px}
+.person-tag{display:inline-block;color:var(--yellow);font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.method{
+  margin-top:90px;display:grid;grid-template-columns:1fr 2fr;border-top:1px solid #333
+}
+.method-intro{padding:38px 30px 0 0}
+.method-intro h3{font-size:42px;line-height:.95;font-weight:500;letter-spacing:-.05em;margin:12px 0}
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.method-item{padding:38px 22px;border-left:1px solid #333;min-height:190px}
+.method-item b{font-size:10px;color:var(--yellow);letter-spacing:.16em}
+.method-item h4{font-size:20px;font-weight:500;margin:36px 0 8px}
+.method-item p{font-size:11px;color:#888}
+.final-note{
+  margin-top:70px;padding:20px 22px;border-left:3px solid var(--yellow);
+  background:rgba(255,196,0,.055);color:#aaa;font-size:11px
+}
+.final-note b{color:#fff}
+@media(max-width:950px){
+ .demo-person{grid-template-columns:1fr;gap:35px}
+ .method{grid-template-columns:1fr}
+ .method-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ .hero-copy{padding-top:145px}
+ .demo-person{padding:28px;margin-top:60px}
+ .method-grid{grid-template-columns:1fr}
+ .method-item{border-left:0;border-top:1px solid #333}
+}
+
+
+/* ===== DARQA V3 ===== */
+.v3-portfolio{background:#f1f0eb;color:#111}.v3-intro{max-width:500px}.v3-intro p{margin:0 0 18px;color:#777}
+.v3-warning{padding:15px 18px;background:#fff;border:1px solid #d7d5cc;color:#666;font-size:11px;margin-bottom:42px}.v3-warning b{color:#111;letter-spacing:.12em;font-size:9px}
+.v3-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.v3-card{grid-column:span 4;cursor:pointer}
+.v3-card:nth-child(2),.v3-card:nth-child(4),.v3-card:nth-child(8),.v3-card:nth-child(11){grid-column:span 5}
+.v3-card:nth-child(3),.v3-card:nth-child(6),.v3-card:nth-child(7),.v3-card:nth-child(12){grid-column:span 3}
+.v3-media{height:350px;position:relative;overflow:hidden;background:#ddd}.v3-card:nth-child(2) .v3-media,.v3-card:nth-child(4) .v3-media,.v3-card:nth-child(8) .v3-media,.v3-card:nth-child(11) .v3-media{height:430px}
+.v3-media img{width:100%;height:100%;object-fit:cover;image-rendering:auto;transition:.7s}.v3-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),transparent 42%,rgba(0,0,0,.52))}
+.v3-card:hover img{transform:scale(1.07)}.v3-no{position:absolute;top:14px;left:14px;color:white;background:rgba(0,0,0,.5);padding:6px 8px;font-size:9px;z-index:2}
+.v3-open{position:absolute;right:14px;bottom:14px;background:#ffc400;color:#111;padding:9px 12px;font-size:9px;font-weight:800;z-index:2;opacity:0;transform:translateY(8px);transition:.3s}.v3-card:hover .v3-open{opacity:1;transform:none}
+.v3-info{padding:13px 2px 25px}.v3-info span{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#777}.v3-info h3{font-size:25px;font-weight:500;margin:4px 0}.v3-info p{font-size:11px;color:#777;margin:0}
+.v3-case{display:grid;grid-template-columns:1.15fr .85fr;background:#101011;color:white;margin-top:85px;min-height:570px}.v3-case-img{position:relative;min-height:570px}.v3-case-img img{width:100%;height:100%;object-fit:cover}.v3-case-img span{position:absolute;bottom:22px;left:22px;background:#ffc400;color:#111;padding:9px 12px;font-size:9px;font-weight:800}
+.v3-case-copy{padding:55px;display:flex;flex-direction:column;justify-content:center}.v3-case-copy h3{font-size:clamp(40px,4.5vw,68px);line-height:.88;letter-spacing:-.055em;font-weight:500;margin:15px 0 22px}.v3-case-copy h3 em{font-style:normal;color:#ffc400}.v3-case-copy p{color:#999;font-size:13px}
+.v3-points{border-top:1px solid #333;margin-top:25px}.v3-points div{padding:12px 0;border-bottom:1px solid #333;font-size:12px}.v3-points b{color:#ffc400;margin-right:15px;font-size:9px}
+.v3-proof{background:#111;color:white}.v3-proof-head{display:grid;grid-template-columns:1fr 1fr;align-items:end}.v3-proof-head h2{font-size:clamp(42px,5vw,74px);line-height:.9;letter-spacing:-.055em;font-weight:500}.v3-question{text-align:right;font-size:clamp(52px,7vw,110px);line-height:.78;letter-spacing:-.07em}.v3-question em{font-style:normal;color:#ffc400}
+.v3-proof-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #333;margin-top:70px}.v3-proof-grid article{padding:30px 25px;min-height:245px;border-right:1px solid #333}.v3-proof-grid article:last-child{border-right:0}.v3-proof-grid span{color:#ffc400;font-size:10px}.v3-proof-grid h3{font-size:27px;font-weight:500;margin:50px 0 10px}.v3-proof-grid p{font-size:12px;color:#888}
+.v3-top-note{margin-top:20px;padding:12px 15px;background:rgba(255,196,0,.08);border-left:3px solid #ffc400;color:#aaa;font-size:10px}.v3-top-note b{color:#ffc400}
+@media(max-width:950px){.v3-card,.v3-card:nth-child(n){grid-column:span 6}.v3-case{grid-template-columns:1fr}.v3-case-img{min-height:400px}.v3-proof-head{grid-template-columns:1fr}.v3-question{text-align:left}}
+@media(max-width:600px){.v3-card,.v3-card:nth-child(n){grid-column:span 12}.v3-media,.v3-card:nth-child(2) .v3-media,.v3-card:nth-child(4) .v3-media,.v3-card:nth-child(8) .v3-media,.v3-card:nth-child(11) .v3-media{height:320px}.v3-case-copy{padding:35px 25px}.v3-proof-grid{grid-template-columns:1fr}.v3-proof-grid article{border-right:0;border-bottom:1px solid #333}}
+<style>
+.v3-modal-card{grid-template-columns:1.2fr .8fr;max-width:1150px}.v3-modal-image{min-height:560px;background:#080809}.v3-modal-image img{width:100%;height:100%;min-height:560px;object-fit:cover}.v3-modal-copy{padding:48px}.v3-modal-copy h2{font-size:clamp(42px,4vw,65px)}
+.v3-fields{border-top:1px solid #333;margin-top:25px}.v3-fields div{display:flex;justify-content:space-between;gap:15px;padding:12px 0;border-bottom:1px solid #333}.v3-fields small{font-size:8px;color:#777}.v3-fields b{font-size:11px;font-weight:500;text-align:right}
+@media(max-width:950px){.v3-modal-card{grid-template-columns:1fr}.v3-modal-image,.v3-modal-image img{min-height:330px;height:330px}}
+
+/* V4 · Curaduría fotográfica externa */
+.v3-media img,.v3-case-img img{image-rendering:auto}
+.v3-media img{background:#e8e7e2}
+.v3-case-img img{background:#111}
+.v3-photo-credit{font-size:9px;color:#888;margin-top:12px}
+
+/* V6 · Proyectos subdivididos */
+.nav-projects{position:relative}.nav-project-trigger{display:flex;align-items:center;gap:5px}.nav-project-trigger span{font-size:14px;line-height:1;transition:.2s}.nav-projects:hover .nav-project-trigger span{transform:rotate(180deg)}
+.nav-project-menu{position:absolute;top:calc(100% + 18px);right:-18px;width:310px;padding:10px;background:rgba(18,18,19,.97);border:1px solid #333;box-shadow:0 20px 50px rgba(0,0,0,.4);opacity:0;visibility:hidden;transform:translateY(8px);transition:.25s}
+.nav-projects:hover .nav-project-menu,.nav-projects:focus-within .nav-project-menu,.nav-projects.open .nav-project-menu{opacity:1;visibility:visible;transform:none}.nav-project-trigger{cursor:pointer}.nav-projects.open .nav-project-trigger span{display:inline-block;transform:rotate(180deg)}.nav-project-menu a{display:flex!important;gap:14px;padding:16px 14px;color:#fff!important;text-decoration:none!important;border-bottom:1px solid #292929}.nav-project-menu a:last-child{border-bottom:0}.nav-project-menu a:hover{background:#222}.nav-project-menu strong{font-family:Montserrat;color:var(--yellow);font-size:11px;letter-spacing:.12em}.nav-project-menu span{font-size:12px;letter-spacing:.08em;text-transform:uppercase}.nav-project-menu small{display:block;color:#888;font-size:10px;letter-spacing:0;text-transform:none;margin-top:4px}
+.project-choice{display:grid;grid-template-columns:1fr 1fr;gap:18px}.project-choice-card{position:relative;min-height:430px;overflow:hidden;border:1px solid #2e2e2e;background:#151517;color:#fff;text-decoration:none;display:flex;align-items:flex-end}.project-choice-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.48;transition:.6s}.project-choice-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.9))}.project-choice-card:hover img{transform:scale(1.05);opacity:.62}.choice-index,.choice-content{position:relative;z-index:2}.choice-index{position:absolute;top:22px;left:24px;color:var(--yellow);font-size:11px;letter-spacing:.16em}.choice-content{padding:30px}.choice-content>span{font-size:10px;color:var(--yellow);font-weight:800;letter-spacing:.2em}.choice-content h3{font-family:Montserrat;font-size:34px;line-height:1.05;font-weight:500;margin:10px 0}.choice-content p{color:#c2c2c4;max-width:430px;margin-bottom:22px}.choice-content b{font-size:10px;letter-spacing:.14em}.project-note{margin-top:24px;border-left:3px solid var(--yellow);background:#1b1b1d;padding:18px 20px;display:flex;gap:20px;align-items:flex-start}.project-note strong{font-size:10px;color:var(--yellow);letter-spacing:.16em;white-space:nowrap}.project-note span{font-size:11px;color:#aaa}@media(max-width:900px){.nav-project-menu{right:auto;left:0}.project-choice{grid-template-columns:1fr}}@media(max-width:600px){.project-choice-card{min-height:360px}.choice-content h3{font-size:28px}.project-note{flex-direction:column;gap:8px}}
+</style>
+<style>
+/* ===== DARQA V2 — Navegación editorial / transición suave ===== */
+html{scroll-behavior:auto!important}
+.darqa-transition{position:fixed;inset:0;z-index:99999;background:#0b0b0c;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease}
+.darqa-transition.is-active{opacity:1;visibility:visible;pointer-events:auto}
+.darqa-transition-inner{text-align:center;transform:translateY(14px);transition:transform .55s cubic-bezier(.22,1,.36,1);padding:30px}
+.darqa-transition.is-active .darqa-transition-inner{transform:translateY(0)}
+.darqa-transition img{width:70px;height:70px;object-fit:contain;display:block;margin:0 auto 22px}
+.darqa-transition-label{font-family:Montserrat,Arial,sans-serif;color:#f7f7f5;font-size:12px;letter-spacing:.24em;text-transform:uppercase}
+.darqa-transition-line{width:90px;height:2px;background:#ffc400;margin:16px auto 0;transform:scaleX(.2);transform-origin:center;transition:transform .7s ease .1s}
+.darqa-transition.is-active .darqa-transition-line{transform:scaleX(1)}
+.darqa-transition.is-leaving{opacity:0;visibility:hidden;transition-delay:.05s}
+.darqa-section-focus{animation:darqaSectionFocus .8s cubic-bezier(.22,1,.36,1)}
+@keyframes darqaSectionFocus{0%{opacity:.72;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+.darqa-nav-target{scroll-margin-top:110px}
+@media(prefers-reduced-motion:reduce){.darqa-transition,.darqa-transition-inner,.darqa-transition-line{transition:none!important}.darqa-section-focus{animation:none!important}}
+</style>
+
+<style id="darqa-services-miniaturas">
+/* SERVICIOS — fotografías pequeñas de apoyo */
+.services .service {
+  min-height: 190px;
+}
+.services .service-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  margin-top: 26px;
+}
+.services .service-copy {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.services .service h3 {
+  margin: 0 0 10px;
+}
+.services .service-thumb {
+  width: 118px;
+  height: 82px;
+  flex: 0 0 118px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 4px;
+  opacity: .92;
+  transition: transform .25s ease, opacity .25s ease;
+}
+.services .service:hover .service-thumb {
+  transform: scale(1.04);
+  opacity: 1;
+}
+@media (max-width: 900px) {
+  .services .service-thumb {
+    width: 105px;
+    height: 74px;
+    flex-basis: 105px;
+  }
+}
+@media (max-width: 560px) {
+  .services .service-main {
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .services .service-thumb {
+    width: 96px;
+    height: 68px;
+    flex-basis: 96px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="demo">DARQA ARQUITECTOS <span>Versión de prueba para revisión y aprobación final</span></div>
+<header class="nav">
+<a class="brand" href="#inicio"><img alt="DARQA" src="assets/darqa-logo.png"/><div><b>DARQA</b><small>ARQUITECTOS · PROYECTOS · GESTIÓN</small></div></a>
+<nav class="navlinks"><a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><div class="nav-projects"><a class="nav-project-trigger" href="#" aria-haspopup="true" aria-expanded="false">Proyectos <span>⌄</span></a><div class="nav-project-menu"><a href="proyectos-retail.html"><strong>01</strong><span>Proyectos Retail<small>Espacios comerciales y gastronómicos</small></span></a><a href="proyectos-residenciales.html"><strong>02</strong><span>Proyectos Residenciales<small>Arquitectura e interiores</small></span></a></div></div><a href="directora.html">Directora</a><a href="#experiencia">Experiencia</a><a href="#contacto">Contacto</a></nav><button aria-label="Menú" class="menu">☰</button></header>
+<main>
+<section class="hero" id="inicio">
+<div class="hero-copy"><div class="eyebrow">Arquitectura · Proyectos · Gestión</div><h1>Diseñamos<br/>espacios con<br/><em>propósito.</em></h1><p>Una nueva presencia digital para mostrar la experiencia, capacidad y visión de DARQA Arquitectos de una manera más sólida, elegante y comercial.</p><div class="actions"><a class="btn primary" href="#proyectos">Explorar proyectos</a><a class="btn" href="#nosotros">Conocer DARQA</a></div></div>
+<div class="hero-image"><div class="hero-tag">Arquitectura · Proyectos · Gestión · Lima, Perú</div></div>
+</section>
+<section class="section about" id="nosotros"><div class="section-head"><div><div class="kicker">01 · Nosotros</div><h2>Una firma que<br/>convierte ideas en espacios.</h2></div><p>Arquitectura, ingeniería, diseño y gestión de proyectos con una mirada integral sobre cada propuesta.</p></div><div class="about-grid"><div class="about-copy"><p><strong>DARQA Arquitectos</strong> es una empresa peruana dedicada a la arquitectura, ingeniería, diseño y desarrollo de proyectos, con especial atención a proyectos comerciales y espacios que requieren coordinación de múltiples especialidades.</p><p>La empresa es liderada por <strong>Alejandra Maguiña Ugarte</strong>, arquitecta y Titular-Gerente, con experiencia en gestión para la construcción y desarrollo de proyectos.</p><p>Esta propuesta busca que la experiencia de DARQA deje de estar dispersa entre redes sociales y portafolios y se convierta en una identidad digital corporativa única.</p><div class="facts"><div class="fact"><b>2023</b><span>Inicio de actividades de DARQA</span></div><div class="fact"><b>10+</b><span>Años de experiencia profesional de Alejandra*</span></div><div class="fact"><b>Retail</b><span>Especialización visible en proyectos</span></div><div class="fact"><b>Lima</b><span>Base de operaciones</span></div></div></div><div class="portrait"></div></div><div class="note"><b>REVISIÓN FINAL:</b> El contenido institucional podrá ajustarse durante la revisión final con DARQA Arquitectos.</div></section>
+<section class="section services" id="servicios"><div class="section-head"><div><div class="kicker">02 · Servicios</div><h2>Capacidad para<br/>desarrollar proyectos.</h2></div><p>Una propuesta integral para desarrollar proyectos con identidad, funcionalidad y coordinación técnica.</p></div><div class="service-grid">
+<article class="service"><span class="num">01</span><div class="service-main"><div class="service-copy"><h3>Arquitectura</h3><p>Diseño y desarrollo arquitectónico de espacios con identidad, funcionalidad y criterio técnico.</p></div><img class="service-thumb" src="assets/residencial-fachada-01.jpg" alt="Arquitectura residencial"></div></article>
+<article class="service"><span class="num">02</span><div class="service-main"><div class="service-copy"><h3>Proyectos</h3><p>Desarrollo y coordinación de proyectos desde la conceptualización hasta la documentación necesaria.</p></div><img class="service-thumb" src="assets/residencial-interior-01.jpg" alt="Desarrollo de proyectos"></div></article>
+<article class="service"><span class="num">03</span><div class="service-main"><div class="service-copy"><h3>Gestión</h3><p>Coordinación de equipos, especialidades y requerimientos para llevar cada proyecto hacia su ejecución.</p></div><img class="service-thumb" src="assets/retail-starbucks-interior-01.png" alt="Gestión de proyecto"></div></article>
+<article class="service"><span class="num">04</span><div class="service-main"><div class="service-copy"><h3>Retail</h3><p>Experiencia en espacios comerciales y proyectos para marcas de alcance nacional.</p></div><img class="service-thumb" src="assets/retail-starbucks-exterior-01.png" alt="Proyecto retail"></div></article>
+<article class="service"><span class="num">05</span><div class="service-main"><div class="service-copy"><h3>Gastronomía</h3><p>Diseño de restaurantes, cafeterías y espacios gastronómicos con enfoque en experiencia.</p></div><img class="service-thumb" src="assets/retail-starbucks-interior-02.png" alt="Espacio gastronómico"></div></article>
+<article class="service"><span class="num">06</span><div class="service-main"><div class="service-copy"><h3>Residencial</h3><p>Proyectos residenciales y propuestas de diseño orientadas a las necesidades de cada cliente.</p></div><img class="service-thumb" src="assets/residencial-cocina-01.jpg" alt="Proyecto residencial"></div></article>
+</div><div class="note"><b>VERSIÓN DE PRUEBA:</b> La estructura de servicios queda lista para revisión y ajuste final con DARQA Arquitectos.</div></section>
+<section class="section projects" id="proyectos">
+<div class="section-head"><div><div class="kicker">03 · Proyectos</div><h2>Dos líneas de<br/><em>experiencia.</em></h2></div><p>El portafolio se presenta en dos áreas independientes para que cada visitante encuentre rápidamente el tipo de proyecto que busca.</p></div>
+<div class="project-choice">
+<a class="project-choice-card active" href="proyectos-retail.html"><div class="choice-index">01</div><div class="choice-content"><span>PROYECTOS RETAIL</span><h3>Espacios que conectan<br/>marcas y personas.</h3><p>Restaurantes, cafeterías, tiendas y espacios comerciales.</p><b>EXPLORAR RETAIL ↗</b></div><img alt="Proyecto Retail" src="assets/burger-king-1.png"/></a>
+<a class="project-choice-card" href="proyectos-residenciales.html"><div class="choice-index">02</div><div class="choice-content"><span>PROYECTOS RESIDENCIALES</span><h3>Arquitectura pensada<br/>para vivir.</h3><p>Proyectos residenciales, interiores y propuestas arquitectónicas.</p><b>EXPLORAR RESIDENCIAL ↗</b></div><img alt="Proyecto Residencial" src="assets/residencial-interior-01.jpg"/></a>
+</div>
+<div class="project-note"><strong>PORTAFOLIO DARQA</strong><span>Una selección visual de proyectos y referencias que permite conocer el enfoque de DARQA Arquitectos.</span></div>
+</section>
+<section class="section v3-proof"><div class="wrap"><div class="v3-proof-head"><div><div class="kicker">04 · Propuesta de valor</div><h2>La web debe responder<br/>una pregunta:</h2></div><div class="v3-question">¿Por qué<br/><em>DARQA?</em></div></div>
+<div class="v3-proof-grid"><article><span>01</span><h3>Experiencia visible</h3><p>Organizar proyectos y referencias para entender rápidamente el tipo de trabajo desarrollado.</p></article>
+<article><span>02</span><h3>Identidad profesional</h3><p>Una identidad digital corporativa que reúne experiencia, proyectos, servicios y visión.</p></article>
+<article><span>03</span><h3>Contacto directo</h3><p>Facilitar el paso desde la inspiración hacia una conversación comercial.</p></article></div></div></section>
+<section class="section experience" id="direccion"><div class="wrap v3-top-note"><b>DIRECCIÓN:</b> liderazgo y visión para el desarrollo integral de proyectos arquitectónicos.</div>
+<div class="demo-person">
+<div class="demo-person-photo">
+<img alt="Alejandra Maguiña Ugarte — fotografía de referencia" src="https://images.pexels.com/photos/11894196/pexels-photo-11894196.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=2400"/>
+</div>
+<div class="demo-person-copy">
+<span class="person-tag">Dirección</span>
+<h3>Alejandra<br/>Maguiña Ugarte</h3>
+<p><strong>Titular-Gerente y representante de DARQA Arquitectos E.I.R.L.</strong></p>
+<p>La información pública revisada la vincula con arquitectura, gestión para la construcción y desarrollo de proyectos comerciales, especialmente en espacios gastronómicos y retail.</p>
+<p>En la versión final, esta sección puede convertirse en una presentación institucional mucho más poderosa: trayectoria, formación, experiencia, filosofía de trabajo y equipo.</p>
+<div class="note"><b>PERFIL PROFESIONAL:</b> dirección, experiencia y visión aplicadas al desarrollo de proyectos.</div>
+</div>
+</div>
+<div class="method">
+<div class="method-intro">
+<div class="kicker">Metodología · Propuesta</div>
+<h3>Una forma clara de explicar el valor de DARQA.</h3>
+<p style="color:#999;font-size:13px">Esta sección es conceptual y debe ajustarse a la metodología real de la empresa.</p>
+</div>
+<div class="method-grid">
+<div class="method-item"><b>01</b><h4>Entender</h4><p>Necesidad, contexto, usuario y objetivos.</p></div>
+<div class="method-item"><b>02</b><h4>Diseñar</h4><p>Concepto, identidad espacial y solución.</p></div>
+<div class="method-item"><b>03</b><h4>Coordinar</h4><p>Especialidades, documentación y requerimientos.</p></div>
+<div class="method-item"><b>04</b><h4>Gestionar</h4><p>Acompañamiento del proyecto según alcance.</p></div>
+</div>
+</div>
+</section>
+<section class="section experience" id="experiencia"><div class="section-head"><div><div class="kicker">04 · Experiencia</div><h2>Una trayectoria<br/>que merece ser visible.</h2></div><p>La experiencia visible de <strong>DARQA Arquitectos</strong> reúne proyectos comerciales y de gastronomía desarrollados para reconocidas marcas, y constituye una de las fortalezas que esta presentación busca poner en valor.</p></div><div class="logos">
+<div class="logo-box logo-square"><img src="assets/logo-starbucks.png" alt="Starbucks"><span>STARBUCKS</span></div>
+<div class="logo-box logo-square"><img src="assets/logo-kfc.png" alt="KFC"><span>KFC</span></div>
+<div class="logo-box logo-square"><img src="assets/logo-burger-king.png" alt="Burger King"><span>BURGER KING</span></div>
+<div class="logo-box logo-square"><img src="assets/logo-chilis.png" alt="Chili's"><span>CHILI'S</span></div>
+<div class="logo-box logo-square"><img src="assets/logo-gelarti.png" alt="Gelarti"><span>GELARTI</span></div>
+<div class="logo-box logo-wide"><img src="assets/logo-chinawok.png" alt="ChinaWok"><span>CHINAWOK</span></div>
+<div class="logo-box logo-wide"><img src="assets/logo-pinkberry.png" alt="Pinkberry"><span>PINKBERRY</span></div>
+<div class="logo-box other"><div class="dots">•••</div><span>OTRAS MARCAS</span></div>
+</div><div class="timeline"><div><div class="kicker">Casos encontrados</div><h2 style="font-size:40px">Proyectos<br/>destacados.</h2></div><div><div class="timeline-item"><b>STARBUCKS · JULIACA</b><h3>Desarrollo de proyecto</h3><p>Alejandra Maguiña ha señalado públicamente haber estado a cargo del desarrollo del proyecto Starbucks Juliaca junto al equipo de arquitectos e ingenieros de DARQA.</p></div><div class="timeline-item"><b>KFC · PROYECTOS COMERCIALES</b><h3>Diseño y desarrollo</h3><p>Existen referencias públicas a proyectos KFC asociados a DARQA/D-ARQCA y a la participación del equipo en su desarrollo.</p></div><div class="timeline-item"><b>OTROS PROYECTOS</b><h3>Retail, gastronomía y residencial</h3><p>El portafolio actual permite identificar una experiencia amplia que puede convertirse en casos de estudio mucho más completos.</p></div></div></div><div class="note"><b>REVISIÓN FINAL:</b> Los contenidos, referencias de marcas y casos de estudio podrán ser ajustados por DARQA Arquitectos antes de la publicación definitiva.</div></section>
+<div class="wrap final-note">
+<b>ANTES DE PUBLICAR:</b> Esta versión de prueba presenta la estructura y línea visual propuesta para la presencia digital de DARQA Arquitectos.
+  Los contenidos definitivos podrán ajustarse durante la revisión final.
+</div>
+<section class="section contact" id="contacto"><div><div class="kicker">05 · Contacto</div><h2>Hablemos de<br/>tu próximo<br/><span style="color:var(--yellow)">proyecto.</span></h2><p style="color:#aaa;max-width:500px">Una web orientada no solo a mostrar proyectos, sino a generar nuevas oportunidades comerciales.</p></div><div class="contact-info"><div class="contact-item"><small>Representante</small><div>Alejandra Maguiña Ugarte<br/><span style="color:#aaa;font-size:14px">Titular-Gerente · Representante</span></div></div><div class="contact-item"><small>WhatsApp</small><a href="https://wa.me/51987598119" target="_blank">+51 987 598 119</a></div><div class="contact-item"><small>Correo</small><a href="mailto:alejandramaguina@darqaarquitectos.com">alejandramaguina@darqaarquitectos.com</a></div><div class="contact-item"><small>Ubicación</small><div>Miraflores · Lima · Perú</div></div><a class="btn primary" href="https://wa.me/51987598119?text=Hola%20DARQA%2C%20quisiera%20consultar%20sobre%20un%20proyecto." target="_blank">Escribir por WhatsApp</a></div></section>
+</main>
+<footer class="footer"><div><b>DARQA ARQUITECTOS E.I.R.L.</b> · RUC 20610907882</div><div>2026 · DARQA ARQUITECTOS · Versión de prueba</div></footer>
+<div aria-hidden="true" class="modal v3-modal" id="modal"><div class="modal-card v3-modal-card">
+<div class="v3-modal-image"><img alt="" id="mimg" src=""/></div><div class="modal-copy v3-modal-copy"><button aria-label="Cerrar" class="close">×</button>
+<div class="kicker" id="mcat"></div><h2 id="mtitle"></h2><p id="msub"></p>
+<div class="v3-fields"><div><small>TIPO</small><b id="mtype">Por validar</b></div><div><small>UBICACIÓN</small><b>Por validar</b></div><div><small>ALCANCE DARQA</small><b>Por validar</b></div><div><small>GALERÍA</small><b>Por validar</b></div></div>
+<div class="note"><strong>FICHA DE PROYECTO:</strong> información y alcances sujetos a confirmación final.</div></div></div></div><script>
+const nav=document.getElementById("nav");window.addEventListener("scroll",()=>nav&&nav.classList.toggle("scrolled",window.scrollY>40));
+const menuButton=document.querySelector(".menu"),navLinks=document.querySelector(".navlinks");menuButton?.addEventListener("click",()=>navLinks?.classList.toggle("mobile-open"));navLinks?.querySelectorAll("a:not(.nav-project-trigger)").forEach(a=>a.addEventListener("click",()=>navLinks.classList.remove("mobile-open")));
+// Proyectos: al hacer clic solo abre el submenú; NO desplaza ni carga la sección de fondo.
+const projectNav=document.querySelector(".nav-projects"),projectTrigger=document.querySelector(".nav-project-trigger");
+function closeProjectMenu(){if(projectNav){projectNav.classList.remove("open");projectTrigger?.setAttribute("aria-expanded","false")}}
+projectTrigger?.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();const open=projectNav.classList.toggle("open");projectTrigger.setAttribute("aria-expanded",open?"true":"false")});
+document.addEventListener("click",e=>{if(projectNav&&!projectNav.contains(e.target))closeProjectMenu()});
+const filters=[...document.querySelectorAll(".v3-filters .filter")],cards=[...document.querySelectorAll(".v3-card")];
+filters.forEach(b=>b.addEventListener("click",()=>{filters.forEach(x=>x.classList.remove("active"));b.classList.add("active");const f=b.dataset.filter;cards.forEach(c=>c.classList.toggle("hidden",f!=="all"&&c.dataset.category!==f))}));
+const modal=document.getElementById("modal"),mimg=document.getElementById("mimg"),mcat=document.getElementById("mcat"),mtitle=document.getElementById("mtitle"),msub=document.getElementById("msub"),mtype=document.getElementById("mtype");
+cards.forEach(c=>c.addEventListener("click",()=>{mimg.src=c.dataset.img;mtitle.textContent=c.dataset.title;mcat.textContent=c.dataset.category;msub.textContent=c.dataset.sub;mtype.textContent=c.dataset.sub;modal.classList.add("open");document.body.style.overflow="hidden"}));
+function closeModal(){modal.classList.remove("open");document.body.style.overflow=""}document.querySelector(".close")?.addEventListener("click",closeModal);modal?.addEventListener("click",e=>{if(e.target===modal)closeModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.1});document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
+</script><div class="v3-photo-credit" style="position:fixed;bottom:8px;right:12px;z-index:999;opacity:.45">Imágenes de referencia · Pexels</div><script>
+/* ===== DARQA V2 — Navegación suave ===== */
+(function(){
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const transition=document.createElement('div');
+  transition.className='darqa-transition';
+  transition.innerHTML='<div class="darqa-transition-inner"><img src="assets/darqa-logo.png" alt="DARQA Arquitectos"><div class="darqa-transition-label">DARQA Arquitectos</div><div class="darqa-transition-line"></div></div>';
+  document.body.appendChild(transition);
+
+  const samePageLinks=[...document.querySelectorAll('a[href^="#"]')].filter(a=>a.getAttribute('href') && a.getAttribute('href')!=='#');
+  function smoothScroll(target){
+    const el=document.querySelector(target); if(!el) return;
+    if(reduce){el.scrollIntoView(); return;}
+    const start=window.scrollY, end=el.getBoundingClientRect().top+window.scrollY-92, distance=end-start, duration=Math.min(1250,Math.max(700,Math.abs(distance)*0.7));
+    let startTime=null;
+    function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+    function step(ts){if(!startTime)startTime=ts; const p=Math.min(1,(ts-startTime)/duration); window.scrollTo(0,start+distance*ease(p)); if(p<1)requestAnimationFrame(step); else {el.classList.remove('darqa-section-focus');void el.offsetWidth;el.classList.add('darqa-section-focus');setTimeout(()=>el.classList.remove('darqa-section-focus'),900)}}
+    requestAnimationFrame(step);
+  }
+  samePageLinks.forEach(a=>a.addEventListener('click',function(e){
+    const href=this.getAttribute('href');
+    if(!document.querySelector(href)) return;
+    e.preventDefault();
+    document.querySelector('.navlinks')?.classList.remove('mobile-open');
+    document.querySelector('.nav-projects')?.classList.remove('open');
+    smoothScroll(href);
+    history.replaceState(null,'',href);
+  }));
+
+  const pageLinks=[...document.querySelectorAll('a[href]')].filter(a=>{
+    const href=a.getAttribute('href');
+    return href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:') && !href.startsWith('javascript:');
+  });
+  pageLinks.forEach(a=>a.addEventListener('click',function(e){
+    if(e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    const href=this.href;
+    if(reduce){window.location.href=href;return;}
+    transition.classList.add('is-active');
+    setTimeout(()=>{window.location.href=href},380);
+  }));
+
+  window.addEventListener('pageshow',()=>transition.classList.remove('is-active'));
+  const hash=window.location.hash;
+  if(hash && document.querySelector(hash)) setTimeout(()=>smoothScroll(hash),120);
+})();
+</script>
+</body></html>

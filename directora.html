@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DARQA Arquitectos · Directora</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600&display=swap");
+:root{--yellow:#ffc400;--ink:#101011;--muted:#6f6f72;--line:#dededb;--soft:#f5f4f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:Inter,Arial,sans-serif}
+.demo-bar{background:var(--yellow);color:#111;text-align:center;padding:9px 18px;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.demo-bar span{font-weight:500;letter-spacing:0;text-transform:none;margin-left:8px}
+.main-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 5vw;background:rgba(11,11,12,.98);border-bottom:1px solid #29292b;color:#fff}
+.main-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}.main-brand img{width:42px;height:42px;object-fit:cover}.main-brand b{font-family:Montserrat,Arial,sans-serif;font-size:18px;letter-spacing:.16em;font-weight:500}.main-brand small{display:block;color:#aaa;font-size:7px;letter-spacing:.18em;margin-top:-2px}
+.main-links{display:flex;align-items:center;gap:28px}.main-links>a,.main-trigger{color:#eee;text-decoration:none;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.main-links>a:hover,.main-trigger:hover{color:var(--yellow)}
+.main-projects{position:relative}.main-trigger{display:flex;align-items:center;gap:5px;background:none;border:0;font-family:inherit;cursor:pointer;padding:0}.main-trigger span{font-size:13px}.main-project-menu{position:absolute;top:calc(100% + 16px);right:-16px;width:300px;padding:8px;background:rgba(18,18,19,.98);border:1px solid #333;box-shadow:0 18px 45px rgba(0,0,0,.35);opacity:0;visibility:hidden;transform:translateY(7px);transition:.22s}.main-projects:hover .main-project-menu,.main-projects:focus-within .main-project-menu{opacity:1;visibility:visible;transform:none}.main-project-menu a{display:flex;gap:14px;padding:16px 14px;color:#fff;text-decoration:none;border-bottom:1px solid #292929}.main-project-menu a:last-child{border-bottom:0}.main-project-menu a:hover{background:#222}.main-project-menu strong{font-family:Montserrat;color:var(--yellow);font-size:11px}.main-project-menu span{font-size:12px;letter-spacing:.08em;text-transform:uppercase}.main-project-menu small{display:block;color:#888;font-size:10px;letter-spacing:0;text-transform:none;margin-top:4px}
+.hero{max-width:1180px;margin:0 auto;padding:80px 6vw 100px;display:grid;grid-template-columns:.92fr 1.08fr;gap:70px;align-items:center}.hero-image{background:#f0efeb;min-height:690px;overflow:hidden}.hero-image img{width:100%;height:100%;min-height:690px;object-fit:cover;display:block;filter:grayscale(100%)}.eyebrow{font-size:10px;color:#999;letter-spacing:.22em;text-transform:uppercase;margin-bottom:18px}.hero h1{font-family:Montserrat,Arial,sans-serif;font-size:clamp(50px,7vw,92px);line-height:.92;font-weight:500;letter-spacing:-.055em;margin:0 0 25px}.hero h1 em{font-style:normal;color:var(--yellow)}.hero h2{font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 24px;font-weight:600}.hero-copy p{font-size:17px;line-height:1.85;color:#555;max-width:650px;margin:0 0 18px}.highlight{margin-top:34px;border-left:3px solid var(--yellow);padding:18px 22px;background:var(--soft);color:#444;font-size:14px;line-height:1.75}.highlight strong{color:#111}
+.experience{background:#111;color:#fff;padding:85px 7vw}.experience-inner{max-width:1180px;margin:auto}.kicker{font-size:10px;color:var(--yellow);letter-spacing:.22em;text-transform:uppercase;font-weight:700}.experience h2{font-family:Montserrat;font-size:clamp(34px,5vw,62px);font-weight:500;line-height:1;margin:10px 0 45px}.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2b2b2d}.exp-card{background:#151517;padding:28px;min-height:190px}.exp-card b{display:block;font-family:Montserrat;font-size:26px;font-weight:500;margin-bottom:12px;color:var(--yellow)}.exp-card p{margin:0;color:#bdbdc1;font-size:13px;line-height:1.7}
+.footer{border-top:1px solid var(--line);padding:22px 5vw;display:flex;justify-content:space-between;color:#888;font-size:10px;letter-spacing:.06em}.footer a{color:#333;text-decoration:none}
+@media(max-width:900px){.main-links{display:none}.hero{grid-template-columns:1fr;gap:35px;padding-top:55px}.hero-image,.hero-image img{min-height:560px}.exp-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.hero{padding:45px 20px 70px}.hero-image,.hero-image img{min-height:460px}.hero-copy p{font-size:15px}.experience{padding:65px 20px}.footer{flex-direction:column;gap:8px}}
+</style>
+<style>
+/* ===== DARQA V2 — Navegación editorial / transición suave ===== */
+html{scroll-behavior:auto!important}
+.darqa-transition{position:fixed;inset:0;z-index:99999;background:#0b0b0c;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease}
+.darqa-transition.is-active{opacity:1;visibility:visible;pointer-events:auto}
+.darqa-transition-inner{text-align:center;transform:translateY(14px);transition:transform .55s cubic-bezier(.22,1,.36,1);padding:30px}
+.darqa-transition.is-active .darqa-transition-inner{transform:translateY(0)}
+.darqa-transition img{width:70px;height:70px;object-fit:contain;display:block;margin:0 auto 22px}
+.darqa-transition-label{font-family:Montserrat,Arial,sans-serif;color:#f7f7f5;font-size:12px;letter-spacing:.24em;text-transform:uppercase}
+.darqa-transition-line{width:90px;height:2px;background:#ffc400;margin:16px auto 0;transform:scaleX(.2);transform-origin:center;transition:transform .7s ease .1s}
+.darqa-transition.is-active .darqa-transition-line{transform:scaleX(1)}
+.darqa-transition.is-leaving{opacity:0;visibility:hidden;transition-delay:.05s}
+.darqa-section-focus{animation:darqaSectionFocus .8s cubic-bezier(.22,1,.36,1)}
+@keyframes darqaSectionFocus{0%{opacity:.72;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+.darqa-nav-target{scroll-margin-top:110px}
+@media(prefers-reduced-motion:reduce){.darqa-transition,.darqa-transition-inner,.darqa-transition-line{transition:none!important}.darqa-section-focus{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="demo-bar">DARQA ARQUITECTOS <span>Versión de prueba para revisión y aprobación final</span></div>
+<nav class="main-nav">
+<a class="main-brand" href="index.html#inicio"><img src="assets/darqa-logo.png" alt="DARQA Arquitectos"><span><b>DARQA</b><small>ARQUITECTOS · PROYECTOS · GESTIÓN</small></span></a>
+<div class="main-links">
+<a href="index.html#inicio">Inicio</a><a href="index.html#nosotros">Nosotros</a><a href="index.html#servicios">Servicios</a>
+<div class="main-projects"><button class="main-trigger" type="button">Proyectos <span>⌄</span></button><div class="main-project-menu">
+<a href="proyectos-retail.html"><strong>01</strong><span>Proyectos Retail<small>Espacios comerciales y gastronómicos</small></span></a>
+<a href="proyectos-residenciales.html"><strong>02</strong><span>Proyectos Residenciales<small>Arquitectura e interiores</small></span></a>
+</div></div>
+<a href="directora.html">Directora</a><a href="index.html#experiencia">Experiencia</a><a href="index.html#contacto">Contacto</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-image"><img src="assets/directora-darqa.png" alt="Directora de DARQA Arquitectos"></div>
+<div class="hero-copy">
+<div class="eyebrow">Dirección · DARQA Arquitectos</div>
+<h1>La visión<br>de <em>DARQA</em></h1>
+<h2>Alejandra Maguiña · Directora</h2>
+<p><strong>DARQA Arquitectos</strong> representa una visión integral de la arquitectura, el diseño de interiores y la gestión de proyectos. Al frente de esta propuesta se encuentra Alejandra Maguiña, profesional especializada en el desarrollo de espacios con una mirada funcional, estética y comercial.</p>
+<p>Cuenta con tres especializaciones, formación como diseñadora de interiores y arquitecta colegiada, además de un diploma en Gestión y Administración de Empresas. Su experiencia se concentra especialmente en el diseño de restaurantes, cocinas y la gestión integral de proyectos comerciales.</p>
+<div class="highlight"><strong>La experiencia profesional se convierte en el sello de DARQA Arquitectos:</strong> una propuesta capaz de integrar concepto, diseño, especialidades y gestión para desarrollar proyectos comerciales y residenciales con identidad propia.</div>
+</div>
+</section>
+
+<section class="experience">
+<div class="experience-inner">
+<div class="kicker">Experiencia destacada</div>
+<h2>Arquitectura con visión comercial.</h2>
+<div class="exp-grid">
+<div class="exp-card"><b>01</b><p>Experiencia en diseño de restaurantes, cocinas y espacios comerciales, con especial atención a la experiencia del usuario.</p></div>
+<div class="exp-card"><b>02</b><p>Trayectoria vinculada a proyectos de franquicias y marcas reconocidas como Starbucks, KFC, Pizza Hut, Burger King, Pinkberry y China Wok, entre otras.</p></div>
+<div class="exp-card"><b>03</b><p>En <strong>DARQA Arquitectos</strong>, esta experiencia se proyecta hacia una propuesta integral que combina arquitectura, interiores y gestión.</p></div>
+</div>
+</div>
+</section>
+
+<footer class="footer"><span>© DARQA Arquitectos · Versión de prueba</span><a href="index.html#inicio">Volver al inicio</a></footer>
+<script>
+/* ===== DARQA V2 — Navegación suave ===== */
+(function(){
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const transition=document.createElement('div');
+  transition.className='darqa-transition';
+  transition.innerHTML='<div class="darqa-transition-inner"><img src="assets/darqa-logo.png" alt="DARQA Arquitectos"><div class="darqa-transition-label">DARQA Arquitectos</div><div class="darqa-transition-line"></div></div>';
+  document.body.appendChild(transition);
+
+  const samePageLinks=[...document.querySelectorAll('a[href^="#"]')].filter(a=>a.getAttribute('href') && a.getAttribute('href')!=='#');
+  function smoothScroll(target){
+    const el=document.querySelector(target); if(!el) return;
+    if(reduce){el.scrollIntoView(); return;}
+    const start=window.scrollY, end=el.getBoundingClientRect().top+window.scrollY-92, distance=end-start, duration=Math.min(1250,Math.max(700,Math.abs(distance)*0.7));
+    let startTime=null;
+    function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+    function step(ts){if(!startTime)startTime=ts; const p=Math.min(1,(ts-startTime)/duration); window.scrollTo(0,start+distance*ease(p)); if(p<1)requestAnimationFrame(step); else {el.classList.remove('darqa-section-focus');void el.offsetWidth;el.classList.add('darqa-section-focus');setTimeout(()=>el.classList.remove('darqa-section-focus'),900)}}
+    requestAnimationFrame(step);
+  }
+  samePageLinks.forEach(a=>a.addEventListener('click',function(e){
+    const href=this.getAttribute('href');
+    if(!document.querySelector(href)) return;
+    e.preventDefault();
+    document.querySelector('.navlinks')?.classList.remove('mobile-open');
+    document.querySelector('.nav-projects')?.classList.remove('open');
+    smoothScroll(href);
+    history.replaceState(null,'',href);
+  }));
+
+  const pageLinks=[...document.querySelectorAll('a[href]')].filter(a=>{
+    const href=a.getAttribute('href');
+    return href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:') && !href.startsWith('javascript:');
+  });
+  pageLinks.forEach(a=>a.addEventListener('click',function(e){
+    if(e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    const href=this.href;
+    if(reduce){window.location.href=href;return;}
+    transition.classList.add('is-active');
+    setTimeout(()=>{window.location.href=href},380);
+  }));
+
+  window.addEventListener('pageshow',()=>transition.classList.remove('is-active'));
+  const hash=window.location.hash;
+  if(hash && document.querySelector(hash)) setTimeout(()=>smoothScroll(hash),120);
+})();
+</script>
+</body>
+</html>

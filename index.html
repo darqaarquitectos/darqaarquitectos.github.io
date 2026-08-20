@@ -347,51 +347,8 @@ const modal=document.getElementById("modal"),mimg=document.getElementById("mimg"
 cards.forEach(c=>c.addEventListener("click",()=>{mimg.src=c.dataset.img;mtitle.textContent=c.dataset.title;mcat.textContent=c.dataset.category;msub.textContent=c.dataset.sub;mtype.textContent=c.dataset.sub;modal.classList.add("open");document.body.style.overflow="hidden"}));
 function closeModal(){modal.classList.remove("open");document.body.style.overflow=""}document.querySelector(".close")?.addEventListener("click",closeModal);modal?.addEventListener("click",e=>{if(e.target===modal)closeModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.1});document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
-</script><div class="v3-photo-credit" style="position:fixed;bottom:8px;right:12px;z-index:999;opacity:.45">Imágenes de referencia · Pexels</div><script>
-/* ===== DARQA V2 — Navegación suave ===== */
-(function(){
-  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const transition=document.createElement('div');
-  transition.className='darqa-transition';
-  transition.innerHTML='<div class="darqa-transition-inner"><img src="assets/darqa-logo.png" alt="DARQA Arquitectos"><div class="darqa-transition-label">DARQA Arquitectos</div><div class="darqa-transition-line"></div></div>';
-  document.body.appendChild(transition);
-
-  const samePageLinks=[...document.querySelectorAll('a[href^="#"]')].filter(a=>a.getAttribute('href') && a.getAttribute('href')!=='#');
-  function smoothScroll(target){
-    const el=document.querySelector(target); if(!el) return;
-    if(reduce){el.scrollIntoView(); return;}
-    const start=window.scrollY, end=el.getBoundingClientRect().top+window.scrollY-92, distance=end-start, duration=Math.min(1250,Math.max(700,Math.abs(distance)*0.7));
-    let startTime=null;
-    function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
-    function step(ts){if(!startTime)startTime=ts; const p=Math.min(1,(ts-startTime)/duration); window.scrollTo(0,start+distance*ease(p)); if(p<1)requestAnimationFrame(step); else {el.classList.remove('darqa-section-focus');void el.offsetWidth;el.classList.add('darqa-section-focus');setTimeout(()=>el.classList.remove('darqa-section-focus'),900)}}
-    requestAnimationFrame(step);
-  }
-  samePageLinks.forEach(a=>a.addEventListener('click',function(e){
-    const href=this.getAttribute('href');
-    if(!document.querySelector(href)) return;
-    e.preventDefault();
-    document.querySelector('.navlinks')?.classList.remove('mobile-open');
-    document.querySelector('.nav-projects')?.classList.remove('open');
-    smoothScroll(href);
-    history.replaceState(null,'',href);
-  }));
-
-  const pageLinks=[...document.querySelectorAll('a[href]')].filter(a=>{
-    const href=a.getAttribute('href');
-    return href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:') && !href.startsWith('javascript:');
-  });
-  pageLinks.forEach(a=>a.addEventListener('click',function(e){
-    if(e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-    e.preventDefault();
-    const href=this.href;
-    if(reduce){window.location.href=href;return;}
-    transition.classList.add('is-active');
-    setTimeout(()=>{window.location.href=href},380);
-  }));
-
-  window.addEventListener('pageshow',()=>transition.classList.remove('is-active'));
-  const hash=window.location.hash;
-  if(hash && document.querySelector(hash)) setTimeout(()=>smoothScroll(hash),120);
-})();
 </script>
+
+
+
 </body></html>

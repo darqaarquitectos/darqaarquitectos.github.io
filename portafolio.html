@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | DARQA Arquitectos</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0b0b;
+            color: #ffffff;
+        }
+
+        header {
+            height: 78px;
+            background: #0b0b0b;
+            border-bottom: 1px solid #292929;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
+        .brand-text strong {
+            display: block;
+            font-size: 22px;
+            letter-spacing: 3px;
+        }
+
+        .brand-text small {
+            display: block;
+            font-size: 8px;
+            letter-spacing: 2px;
+            color: #bdbdbd;
+            margin-top: 3px;
+        }
+
+        .back-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border: 1px solid #ffc400;
+            padding: 12px 20px;
+            transition: .25s ease;
+        }
+
+        .back-link:hover {
+            background: #ffc400;
+            color: #000000;
+        }
+
+        .hero-portafolio {
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background: #111111;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .kicker {
+            color: #ffc400;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 82px);
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .hero-content p {
+            color: #cfcfcf;
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .portafolio-menu {
+            padding: 55px 5%;
+            background: #0b0b0b;
+        }
+
+        .menu-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .menu-card {
+            border: 1px solid #303030;
+            padding: 35px;
+            background: #151515;
+            text-decoration: none;
+            color: #ffffff;
+            transition: .25s ease;
+        }
+
+        .menu-card:hover {
+            border-color: #ffc400;
+            transform: translateY(-4px);
+        }
+
+        .menu-card span {
+            color: #ffc400;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .menu-card h2 {
+            font-size: 27px;
+            margin: 14px 0;
+        }
+
+        .menu-card p {
+            color: #bdbdbd;
+            line-height: 1.6;
+        }
+
+        .footer {
+            padding: 35px 5%;
+            text-align: center;
+            border-top: 1px solid #292929;
+            color: #888888;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 0 20px;
+            }
+
+            .back-link {
+                padding: 9px 12px;
+                font-size: 11px;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-portafolio {
+                min-height: 380px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="brand">
+            <img src="assets/darqa-logo.png" alt="DARQA Arquitectos">
+            <div class="brand-text">
+                <strong>DARQA</strong>
+                <small>ARQUITECTOS · PROYECTOS · GESTIÓN</small>
+            </div>
+        </a>
+
+        <a href="index.html" class="back-link">
+            VOLVER A DARQA
+        </a>
+    </header>
+
+    <main>
+
+        <section class="hero-portafolio">
+            <div class="hero-content">
+
+                <div class="kicker">
+                    DARQA ARQUITECTOS · PORTAFOLIO
+                </div>
+
+                <h1>
+                    Espacios que<br>
+                    construyen marcas.
+                </h1>
+
+                <p>
+                    Conoce nuestra experiencia, metodología y proyectos
+                    desarrollados para marcas comerciales y gastronómicas.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="portafolio-menu">
+
+            <div class="menu-grid">
+
+                <a href="presentacion-darqa.html" class="menu-card"></a>
+                    <span>01 · PRESENTACIÓN</span>
+                    <h2>Conoce DARQA</h2>
+                    <p>
+                        Nuestra experiencia, propuesta de valor,
+                        metodología y forma de trabajo.
+                    </p>
+                </a>
+
+                <a href="#" class="menu-card">
+                    <span>02 · PROYECTOS</span>
+                    <h2>Portafolio de proyectos</h2>
+                    <p>
+                        Explora los proyectos desarrollados por
+                        DARQA Arquitectos.
+                    </p>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        DARQA ARQUITECTOS · LIMA, PERÚ
+    </footer>
+
+</body>
+</html>

@@ -21,17 +21,25 @@ html{scroll-behavior:auto!important}
 </style>
 </head><body><div class="demo-bar">DARQA ARQUITECTOS <span>Versión de prueba para revisión y aprobación final</span></div><nav class="main-nav">
 <a class="main-brand" href="index.html#inicio"><img src="assets/darqa-logo.png" alt="DARQA Arquitectos"><span><b>DARQA</b><small>ARQUITECTOS · PROYECTOS · GESTIÓN</small></span></a>
+
 <div class="main-links">
-<a class="main-home" href="index.html#inicio">Inicio</a><a href="index.html#nosotros">Nosotros</a>
+<a href="index.html#inicio">Inicio</a>
+<a href="index.html#nosotros">Nosotros</a>
 <a href="index.html#servicios">Servicios</a>
+<a href="portafolio.html">PORTAFOLIO</a>
 <div class="main-projects">
-<button class="main-trigger" type="button" aria-haspopup="true">Proyectos <span>⌄</span></button>
+<button class="main-projects-trigger" type="button" aria-haspopup="true">Proyectos <span>⌄</span></button>
 <div class="main-project-menu">
 <a href="proyectos-retail.html"><strong>01</strong><span>Proyectos Retail<small>Espacios comerciales y gastronómicos</small></span></a>
 <a href="proyectos-residenciales.html"><strong>02</strong><span>Proyectos Residenciales<small>Arquitectura e interiores</small></span></a>
-</div></div>
-<a href="directora.html">Directora</a><a href="index.html#experiencia">Experiencia</a>
+</div>
+</div>
+<a href="directora.html">Directora</a>
+<a href="index.html#experiencia">Experiencia</a>
 <a href="index.html#contacto">Contacto</a>
+</div>
+
+
 </div></nav><section class="hero"><div><div style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#999;margin-bottom:12px">03 · Proyectos</div><h1>Residenciales</h1></div><p>Arquitectura e interiores residenciales organizados como una segunda línea de portafolio, independiente de la experiencia Retail.</p></section><main class="gallery"><article class="project-card tall" data-img="assets/residencial-fachada-01.jpg"><img src="assets/residencial-fachada-01.jpg" alt="Proyecto residencial" loading="lazy"/><div class="project-overlay"><span>Fachada · referencia visual</span><h3>Proyecto residencial</h3></div></article><article class="project-card " data-img="assets/residencial-fachada-02.jpg"><img src="assets/residencial-fachada-02.jpg" alt="Proyecto residencial" loading="lazy"/><div class="project-overlay"><span>Volumetría · referencia visual</span><h3>Proyecto residencial</h3></div></article><article class="project-card " data-img="assets/residencial-interior-01.jpg"><img src="assets/residencial-interior-01.jpg" alt="Proyecto residencial" loading="lazy"/><div class="project-overlay"><span>Interior · sala</span><h3>Proyecto residencial</h3></div></article><article class="project-card wide" data-img="assets/residencial-cocina-01.jpg"><img src="assets/residencial-cocina-01.jpg" alt="Proyecto residencial" loading="lazy"/><div class="project-overlay"><span>Interior · cocina</span><h3>Proyecto residencial</h3></div></article><article class="project-card " data-img="assets/residencial-cocina-02.jpg"><img src="assets/residencial-cocina-02.jpg" alt="Proyecto residencial" loading="lazy"/><div class="project-overlay"><span>Interior · cocina</span><h3>Proyecto residencial</h3></div></article></main><div class="note"><b>PORTAFOLIO DARQA</b><span>Selección visual de proyectos para presentar la experiencia de DARQA Arquitectos.</span></div><footer class="footer"><span>DARQA ARQUITECTOS · VERSIÓN DE PRUEBA</span><a href="index.html#proyectos">← Volver al portafolio de Proyectos</a></footer><div class="project-modal" id="projectModal" aria-hidden="true"><button class="modal-close" type="button" aria-label="Cerrar">×</button><div class="modal-inner"><img id="modalImage" src="" alt=""><div class="modal-caption" id="modalCaption"></div></div></div><script>const modal=document.getElementById('projectModal'),modalImage=document.getElementById('modalImage'),modalCaption=document.getElementById('modalCaption');document.querySelectorAll('.project-card').forEach(card=>card.addEventListener('click',()=>{modalImage.src=card.dataset.img;modalImage.alt=card.querySelector('img')?.alt||'Proyecto';modalCaption.textContent=card.querySelector('h3')?.textContent||'Proyecto';modal.classList.add('show');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open')}));function closeProject(){modal.classList.remove('show');modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');modalImage.src=''}modal.querySelector('.modal-close').addEventListener('click',closeProject);modal.addEventListener('click',e=>{if(e.target===modal)closeProject()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProject()});</script><script>
 /* ===== DARQA V2 — Navegación suave ===== */
 (function(){

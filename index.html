@@ -146,7 +146,17 @@ html{scroll-behavior:auto!important}
 .darqa-section-focus{animation:darqaSectionFocus .8s cubic-bezier(.22,1,.36,1)}
 @keyframes darqaSectionFocus{0%{opacity:.72;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
 .darqa-nav-target{scroll-margin-top:110px}
+
+#servicios{
+    scroll-margin-top:110px;
+}
+
 @media(prefers-reduced-motion:reduce){.darqa-transition,.darqa-transition-inner,.darqa-transition-line{transition:none!important}.darqa-section-focus{animation:none!important}}
+
+
+
+
+
 
 /* ===== ¿POR QUÉ DARQA? ===== */
 .why-darqa {
@@ -525,7 +535,7 @@ html{scroll-behavior:auto!important}
 
 </section>
 
-<div style="background:#111111; color:#ffffff; text-align:center; padding:55px 20px 35px;"></div>
+<div id="servicios" style="background:#111111; color:#ffffff; text-align:center; padding:55px 20px 35px;"></div>
 
 <h2 style="margin:0; font-size:48px; line-height:1.1; font-weight:500; color:#ffffff;">
         Servicios
@@ -551,7 +561,7 @@ html{scroll-behavior:auto!important}
 
 <div class="services">
 
-<article class="service" id="servicios">
+<article class="service">
 
     <span class="num">01</span>
     <div class="service-main">

@@ -1277,7 +1277,6 @@ document.addEventListener("keydown", function(event) {
 
 });
 
-
 // =====================================================
 // MENÚ HAMBURGUESA - VERSIÓN MÓVIL
 // =====================================================
@@ -1287,7 +1286,10 @@ const navMenu = document.querySelector(".navlinks");
 
 if (menuButton && navMenu) {
 
-    menuButton.addEventListener("click", function () {
+    // ABRIR / CERRAR MENÚ
+    menuButton.addEventListener("click", function (event) {
+
+        event.stopPropagation();
 
         const abierto = navMenu.classList.toggle("mobile-open");
 
@@ -1295,6 +1297,44 @@ if (menuButton && navMenu) {
             "aria-expanded",
             abierto ? "true" : "false"
         );
+
+    });
+
+
+    // CERRAR MENÚ AL SELECCIONAR UNA OPCIÓN
+    navMenu.querySelectorAll("a:not(.nav-project-trigger)").forEach(function (enlace) {
+
+        enlace.addEventListener("click", function () {
+
+            navMenu.classList.remove("mobile-open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+
+    // CERRAR MENÚ AL HACER CLIC FUERA
+    document.addEventListener("click", function (event) {
+
+        if (
+            navMenu.classList.contains("mobile-open") &&
+            !navMenu.contains(event.target) &&
+            !menuButton.contains(event.target)
+        ) {
+
+            navMenu.classList.remove("mobile-open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
 
     });
 

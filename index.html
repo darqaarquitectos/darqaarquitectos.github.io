@@ -1158,116 +1158,48 @@ contactForm.addEventListener("submit", function(event) {
    PASO 2
    ENVIAR LOS DATOS A WHATSAPP
    ===================================================== */
-
 function enviarWhatsApp() {
-
-
-    /* =============================================
-       NÚMERO DE DESTINO PARA LAS PRUEBAS
-       +51 981 760 638
-       ============================================= */
 
     const numeroWhatsApp = "51981760638";
 
+    const nombre = document.getElementById("clienteNombre").value.trim();
+    const empresa = document.getElementById("clienteEmpresa").value.trim();
+    const correo = document.getElementById("clienteCorreo").value.trim();
+    const servicio = document.getElementById("clienteServicio").value.trim();
+    const mensaje = document.getElementById("clienteMensaje").value.trim();
 
-    /* =============================================
-       OBTENER DATOS DEL CLIENTE
-       ============================================= */
-
-    const nombre =
-        document.getElementById("clienteNombre").value.trim();
-
-    const empresa =
-        document.getElementById("clienteEmpresa").value.trim();
-
-    const telefono =
-        document.getElementById("clienteTelefono").value.trim();
-
-    const correo =
-        document.getElementById("clienteCorreo").value.trim();
-
-    const servicio =
-        document.getElementById("clienteServicio").value;
-
-    const mensaje =
-        document.getElementById("clienteMensaje").value.trim();
-
-
-    /* =============================================
-       CONSTRUIR MENSAJE
-       ============================================= */
-
-    let texto = "";
-
-    texto += "Hola DARQA Arquitectos.\n\n";
+    let texto = "Hola DARQA Arquitectos.\n\n";
 
     texto += "Mi nombre es " + nombre + ".\n";
 
-
     if (empresa) {
-
         texto += "Empresa: " + empresa + ".\n";
-
     }
-
-
-    if (telefono) {
-
-        texto += "Mi WhatsApp: " + telefono + ".\n";
-
-    }
-
 
     if (correo) {
-
         texto += "Mi correo: " + correo + ".\n";
-
     }
 
-
-    texto += "\n";
-
-    texto += "Estoy interesado(a) en: "
-          + servicio
-          + ".\n";
-
+    texto += "\nEstoy interesado(a) en: " + servicio + ".\n";
 
     if (mensaje) {
-
-        texto += "\n";
-
-        texto += "Información sobre mi proyecto: "
-              + mensaje
-              + ".\n";
-
+        texto += "\nInformación sobre mi proyecto:\n";
+        texto += mensaje + "\n";
     }
 
+    texto += "\nQuisiera solicitar información y coordinar una reunión para conversar sobre mi proyecto.\n";
 
-    texto += "\n";
+    texto += "\nSolicitud generada desde el formulario web de DARQA Arquitectos.";
 
-    texto += "Quisiera solicitar información y coordinar "
-          + "una reunión para conversar sobre mi proyecto.\n\n";
-
-    texto += "Gracias.";
-
-
-    /* =============================================
-       CREAR ENLACE DE WHATSAPP
-       ============================================= */
+    texto += "\n\nGracias.";
 
     const url =
-        "https://wa.me/"
-        + numeroWhatsApp
-        + "?text="
-        + encodeURIComponent(texto);
-
-
-    /* =============================================
-       ABRIR WHATSAPP
-       ============================================= */
+        "https://wa.me/" +
+        numeroWhatsApp +
+        "?text=" +
+        encodeURIComponent(texto);
 
     window.location.href = url;
-
 }
 
 

@@ -24,15 +24,28 @@
 @media(max-width:900px){
 
 .menu{
-    display:block;
+    display:flex;
+    align-items:center;
+    gap:8px;
     background:none;
     border:0;
     color:#fff;
-    font-size:28px;
+    font-size:16px;
+    font-weight:600;
     cursor:pointer;
-    padding:8px;
+    padding:8px 4px;
     margin-left:auto;
     line-height:1;
+}
+
+.menu-icon{
+    font-size:28px;
+    line-height:1;
+}
+
+.menu-text{
+    font-size:13px;
+    letter-spacing:.08em;
 }
 
 .main-links{
@@ -117,8 +130,9 @@ html{scroll-behavior:auto!important}
 
 
  <button class="menu" type="button" aria-label="Abrir menú" aria-expanded="false">
-        ☰
-    </button>
+    <span class="menu-icon">☰</span>
+    <span class="menu-text">MENÚ</span>
+</button>
 
 
     <div class="main-links">
@@ -217,6 +231,30 @@ Para conocer con mayor detalle la trayectoria profesional y formación de Alejan
   document.body.appendChild(transition);
 
   const samePageLinks=[...document.querySelectorAll('a[href^="#"]')].filter(a=>a.getAttribute('href') && a.getAttribute('href')!=='#');
+
+
+
+const menuButton = document.querySelector('.menu');
+const mainLinks = document.querySelector('.main-links');
+
+if(menuButton && mainLinks){
+    menuButton.addEventListener('click', function(){
+        const isOpen = mainLinks.classList.toggle('mobile-open');
+
+        menuButton.setAttribute(
+            'aria-expanded',
+            isOpen ? 'true' : 'false'
+        );
+
+        menuButton.setAttribute(
+            'aria-label',
+            isOpen ? 'Cerrar menú' : 'Abrir menú'
+        );
+    });
+}
+
+
+
   function smoothScroll(target){
     const el=document.querySelector(target); if(!el) return;
     if(reduce){el.scrollIntoView(); return;}

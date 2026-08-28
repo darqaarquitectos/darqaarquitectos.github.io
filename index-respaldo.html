@@ -872,7 +872,7 @@ puede consultar nuestro <a href="portafolio.html">Portafolio</a>.
  <button
     class="btn primary"
     type="button"
-    onclick="abrirContacto()">
+    onclick="document.getElementById('contactModal').classList.add('active')">
     Escribir por WhatsApp
 </button>
 
@@ -880,101 +880,76 @@ puede consultar nuestro <a href="portafolio.html">Portafolio</a>.
 </main>
 <footer class="footer"><div><b>DARQA ARQUITECTOS E.I.R.L.</b> · RUC 20610907882</div><div>2026 · DARQA ARQUITECTOS · </div></footer>
 
-<style>
-/* ===== FORMULARIO DE CONTACTO DARQA ===== */
-#contactModal{display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.78);padding:30px 18px;overflow:auto}
-#contactModal.active{display:flex;align-items:center;justify-content:center}
-#contactModal .contact-box{width:min(680px,100%);background:#151517;color:#fff;border:1px solid #333;box-shadow:0 25px 80px rgba(0,0,0,.55);position:relative;padding:38px}
-#contactModal .contact-close{position:absolute;right:18px;top:14px;background:none;border:0;color:#fff;font-size:30px;cursor:pointer}
-#contactModal .contact-kicker{color:#ffc400;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
-#contactModal h2{font-size:38px;line-height:1;margin:0 0 10px}
-#contactModal .contact-lead{color:#aaa;font-size:14px;line-height:1.6;margin:0 0 25px}
-#contactModal .contact-form{display:grid;gap:15px}
-#contactModal .contact-form label{display:grid;gap:7px;color:#bbb;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-#contactModal .contact-form input,#contactModal .contact-form select,#contactModal .contact-form textarea{width:100%;box-sizing:border-box;background:#0d0d0e;color:#fff;border:1px solid #3a3a3a;padding:13px 14px;font:inherit;outline:none}
-#contactModal .contact-form input:focus,#contactModal .contact-form select:focus,#contactModal .contact-form textarea:focus{border-color:#ffc400}
-#contactModal .contact-form textarea{min-height:105px;resize:vertical}
-#contactModal .contact-two{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-#contactModal .contact-submit,#contactModal .contact-send-final,#contactModal .contact-edit{border:0;padding:14px 18px;font-weight:800;letter-spacing:.06em;cursor:pointer}
-#contactModal .contact-submit,#contactModal .contact-send-final{background:#ffc400;color:#111}
-#contactModal .contact-actions{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
-#contactModal .contact-edit{background:#2a2a2c;color:#fff}
-#contactModal .contact-summary{border-top:1px solid #333;border-bottom:1px solid #333;margin-top:20px}
-#contactModal .summary-row{display:grid;grid-template-columns:150px 1fr;gap:15px;padding:13px 0;border-bottom:1px solid #292929}
-#contactModal .summary-row:last-child{border-bottom:0}
-#contactModal .summary-label{color:#ffc400;font-size:10px;font-weight:800;text-transform:uppercase}
-#contactModal .summary-value{color:#eee;font-size:14px;white-space:pre-wrap}
-#contactModal .contact-note{margin-top:18px;color:#999;font-size:11px;line-height:1.5}
-@media(max-width:600px){#contactModal .contact-box{padding:28px 20px}#contactModal h2{font-size:30px}#contactModal .contact-two{grid-template-columns:1fr}#contactModal .summary-row{grid-template-columns:1fr;gap:5px}}
-</style>
-
-
 <div aria-hidden="true" class="modal v3-modal" id="contactModal">
-  <div class="contact-box" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
-    <button type="button" class="contact-close" aria-label="Cerrar" onclick="cerrarContacto()">×</button>
 
-    <div id="contactFormView">
-      <div class="contact-kicker">Contacto DARQA</div>
-      <h2 id="contactTitle">Hablemos de tu proyecto.</h2>
-      <p class="contact-lead">Completa tus datos y revisa la información antes de enviarla por WhatsApp.</p>
+    <div class="modal-card v3-modal-card">
 
-      <form id="darqaContactForm" class="contact-form">
-        <div class="contact-two">
-          <label>Nombre *
-            <input id="clienteNombre" type="text" required placeholder="Tu nombre">
-          </label>
-          <label>Empresa
-            <input id="clienteEmpresa" type="text" placeholder="Empresa o negocio">
-          </label>
+        <div class="v3-modal-image">
+            <img alt="" id="mimg" src="">
         </div>
 
-        <div class="contact-two">
-          <label>WhatsApp *
-            <input id="clienteTelefono" type="tel" required placeholder="Ej. 987 654 321">
-          </label>
-          <label>Correo
-            <input id="clienteCorreo" type="email" placeholder="correo@empresa.com">
-          </label>
+        <div class="modal-copy v3-modal-copy">
+
+            <button aria-label="Cerrar" class="close" onclick="cerrarContacto()">×</button>
+
+            <div class="kicker" id="mcat"></div>
+
+            <h2 id="mtitle"></h2>
+
+            <p id="msub"></p>
+
+            <div class="v3-fields">
+
+                <div>
+                    <small>UBICACIÓN</small>
+                    <b id="mtype">Por validar</b>
+                </div>
+
+                <div>
+                    <small>ALCANCE DARQA</small>
+                    <b>Por validar</b>
+                </div>
+
+                <div>
+                    <small>GALERÍA</small>
+                    <b>Por validar</b>
+                </div>
+
+            </div>
+
+            <div class="note">
+                <strong>FICHA DE PROYECTO:</strong>
+                información y alcances sujetos a confirmación final.
+            </div>
+
+            <div class="contact-actions">
+
+                <button
+                    type="button"
+                    class="contact-edit"
+                    onclick="editarContacto()">
+                    ← CORREGIR DATOS
+                </button>
+
+                <button
+                    type="button"
+                    class="contact-send"
+                    onclick="enviarWhatsApp()">
+                    CONFIRMAR Y ABRIR WHATSAPP
+                </button>
+
+            </div>
+
         </div>
 
-        <label>Servicio de interés *
-          <select id="clienteServicio" required>
-            <option value="">Selecciona una opción</option>
-            <option>Arquitectura</option>
-            <option>Diseño de interiores</option>
-            <option>Proyecto comercial / Retail</option>
-            <option>Proyecto residencial</option>
-            <option>Gestión de proyecto</option>
-            <option>Otro</option>
-          </select>
-        </label>
-
-        <label>Cuéntanos brevemente sobre tu proyecto
-          <textarea id="clienteMensaje" placeholder="Tipo de proyecto, ubicación, alcance o consulta..."></textarea>
-        </label>
-
-        <button type="submit" class="contact-submit">REVISAR Y CONTINUAR</button>
-      </form>
     </div>
 
-    <div id="contactReviewView" style="display:none">
-      <div class="contact-kicker">Confirmación</div>
-      <h2>Revisa tus datos.</h2>
-      <p class="contact-lead">Si todo está correcto, pulsa el botón para abrir WhatsApp con el mensaje preparado.</p>
-      <div id="contactSummary" class="contact-summary"></div>
-      <p class="contact-note">El mensaje se abrirá en WhatsApp y podrás revisarlo antes de enviarlo.</p>
-      <div class="contact-actions">
-        <button type="button" class="contact-edit" onclick="editarContacto()">← CORREGIR DATOS</button>
-        <button type="button" class="contact-send-final" onclick="enviarWhatsApp()">CONFIRMAR Y ABRIR WHATSAPP</button>
-      </div>
-    </div>
-  </div>
 </div>
 
 <script>
+
 /* =====================================================
    FORMULARIO INTELIGENTE DE CONTACTO DARQA
-   WhatsApp de prueba: +51 981 760 638
    ===================================================== */
 
 const contactModal = document.getElementById("contactModal");
@@ -984,324 +959,150 @@ const contactReviewView = document.getElementById("contactReviewView");
 const contactSummary = document.getElementById("contactSummary");
 
 
-/* =====================================================
-   ABRIR FORMULARIO
-   ===================================================== */
-
-function abrirContacto() {
-
-    contactModal.classList.add("active");
-
-    contactModal.setAttribute("aria-hidden", "false");
-
-    contactFormView.style.display = "block";
-
-    contactReviewView.style.display = "none";
-
-    document.body.style.overflow = "hidden";
-}
-
-
-/* =====================================================
-   CERRAR FORMULARIO
-   ===================================================== */
-
-function cerrarContacto() {
-
-    contactModal.classList.remove("active");
-
-    contactModal.setAttribute("aria-hidden", "true");
-
-    document.body.style.overflow = "";
-}
-
-
-/* =====================================================
-   CORREGIR DATOS
-   ===================================================== */
-
-function editarContacto() {
-
-    contactReviewView.style.display = "none";
-
-    contactFormView.style.display = "block";
-}
-
-
-/* =====================================================
-   PASO 1
-   RECIBIR LOS DATOS DEL CLIENTE
-   ===================================================== */
+/* -----------------------------------------------------
+   PASO 1: REVISAR LOS DATOS
+   ----------------------------------------------------- */
 
 contactForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
+    const nombre = document.getElementById("clienteNombre").value.trim();
+    const empresa = document.getElementById("clienteEmpresa").value.trim();
+    const telefono = document.getElementById("clienteTelefono").value.trim();
+    const correo = document.getElementById("clienteCorreo").value.trim();
+    const servicio = document.getElementById("clienteServicio").value;
+    const mensaje = document.getElementById("clienteMensaje").value.trim();
 
-    const nombre =
-        document.getElementById("clienteNombre").value.trim();
-
-    const empresa =
-        document.getElementById("clienteEmpresa").value.trim();
-
-    const telefono =
-        document.getElementById("clienteTelefono").value.trim();
-
-    const correo =
-        document.getElementById("clienteCorreo").value.trim();
-
-    const servicio =
-        document.getElementById("clienteServicio").value;
-
-    const mensaje =
-        document.getElementById("clienteMensaje").value.trim();
-
-
-    /* ---------------------------------------------
-       Mostrar resumen para que el cliente revise
-       --------------------------------------------- */
 
     contactSummary.innerHTML = `
-
-        <div class="summary-row">
-
-            <div class="summary-label">
-                Nombre
-            </div>
-
-            <div class="summary-value">
+        <div class="contact-summary-row">
+            <div class="contact-summary-label">Nombre</div>
+            <div class="contact-summary-value">
                 ${nombre}
             </div>
-
         </div>
 
-
-        <div class="summary-row">
-
-            <div class="summary-label">
-                Empresa
-            </div>
-
-            <div class="summary-value">
+        <div class="contact-summary-row">
+            <div class="contact-summary-label">Empresa</div>
+            <div class="contact-summary-value">
                 ${empresa || "No indicado"}
             </div>
-
         </div>
 
-
-        <div class="summary-row">
-
-            <div class="summary-label">
-                WhatsApp
-            </div>
-
-            <div class="summary-value">
+        <div class="contact-summary-row">
+            <div class="contact-summary-label">WhatsApp</div>
+            <div class="contact-summary-value">
                 ${telefono}
             </div>
-
         </div>
 
-
-        <div class="summary-row">
-
-            <div class="summary-label">
-                Correo
-            </div>
-
-            <div class="summary-value">
+        <div class="contact-summary-row">
+            <div class="contact-summary-label">Correo</div>
+            <div class="contact-summary-value">
                 ${correo || "No indicado"}
             </div>
-
         </div>
 
-
-        <div class="summary-row">
-
-            <div class="summary-label">
-                Servicio
-            </div>
-
-            <div class="summary-value">
+        <div class="contact-summary-row">
+            <div class="contact-summary-label">Servicio</div>
+            <div class="contact-summary-value">
                 ${servicio}
             </div>
-
         </div>
 
-
-        <div class="summary-row">
-
-            <div class="summary-label">
-                Proyecto
-            </div>
-
-            <div class="summary-value">
+        <div class="contact-summary-row">
+            <div class="contact-summary-label">Proyecto</div>
+            <div class="contact-summary-value">
                 ${mensaje || "No indicado"}
             </div>
-
         </div>
-
     `;
 
 
-    /* ---------------------------------------------
-       Cambiar a pantalla de confirmación
-       --------------------------------------------- */
+    /* Cambiar del formulario a la pantalla de revisión */
 
     contactFormView.style.display = "none";
-
     contactReviewView.style.display = "block";
 
 });
 
 
-/* =====================================================
-   PASO 2
-   ENVIAR LOS DATOS A WHATSAPP
-   ===================================================== */
+/* -----------------------------------------------------
+   PASO 2: REGRESAR Y CORREGIR DATOS
+   ----------------------------------------------------- */
 
-function enviarWhatsApp() {
+function editarContacto() {
 
-
-    /* =============================================
-       NÚMERO DE DESTINO PARA LAS PRUEBAS
-       +51 981 760 638
-       ============================================= */
-
-    const numeroWhatsApp = "51981760638";
-
-
-    /* =============================================
-       OBTENER DATOS DEL CLIENTE
-       ============================================= */
-
-    const nombre =
-        document.getElementById("clienteNombre").value.trim();
-
-    const empresa =
-        document.getElementById("clienteEmpresa").value.trim();
-
-    const telefono =
-        document.getElementById("clienteTelefono").value.trim();
-
-    const correo =
-        document.getElementById("clienteCorreo").value.trim();
-
-    const servicio =
-        document.getElementById("clienteServicio").value;
-
-    const mensaje =
-        document.getElementById("clienteMensaje").value.trim();
-
-
-    /* =============================================
-       CONSTRUIR MENSAJE
-       ============================================= */
-
-    let texto = "";
-
-    texto += "Hola DARQA Arquitectos.\n\n";
-
-    texto += "Mi nombre es " + nombre + ".\n";
-
-
-    if (empresa) {
-
-        texto += "Empresa: " + empresa + ".\n";
-
-    }
-
-
-    if (telefono) {
-
-        texto += "Mi WhatsApp: " + telefono + ".\n";
-
-    }
-
-
-    if (correo) {
-
-        texto += "Mi correo: " + correo + ".\n";
-
-    }
-
-
-    texto += "\n";
-
-    texto += "Estoy interesado(a) en: "
-          + servicio
-          + ".\n";
-
-
-    if (mensaje) {
-
-        texto += "\n";
-
-        texto += "Información sobre mi proyecto: "
-              + mensaje
-              + ".\n";
-
-    }
-
-
-    texto += "\n";
-
-    texto += "Quisiera solicitar información y coordinar "
-          + "una reunión para conversar sobre mi proyecto.\n\n";
-
-    texto += "Gracias.";
-
-
-    /* =============================================
-       CREAR ENLACE DE WHATSAPP
-       ============================================= */
-
-    const url =
-        "https://wa.me/"
-        + numeroWhatsApp
-        + "?text="
-        + encodeURIComponent(texto);
-
-
-    /* =============================================
-       ABRIR WHATSAPP
-       ============================================= */
-
-    window.location.href = url;
+    contactReviewView.style.display = "none";
+    contactFormView.style.display = "block";
 
 }
 
 
-/* =====================================================
-   CERRAR AL HACER CLIC FUERA DEL CUADRO
-   ===================================================== */
+/* -----------------------------------------------------
+   CERRAR EL FORMULARIO
+   ----------------------------------------------------- */
 
-contactModal.addEventListener("click", function(event) {
+function cerrarContacto() {
 
-    if (event.target === contactModal) {
+    contactModal.classList.remove("active");
 
-        cerrarContacto();
-
-    }
-
-});
+}
 
 
-/* =====================================================
-   CERRAR CON TECLA ESC
-   ===================================================== */
+/* -----------------------------------------------------
+   ABRIR EL FORMULARIO
+   ----------------------------------------------------- */
+function abrirContacto() {
+    contactModal.classList.add("active");
+    contactFormView.style.display = "block";
+    contactReviewView.style.display = "none";
+}
 
-document.addEventListener("keydown", function(event) {
 
-    if (
-        event.key === "Escape" &&
-        contactModal.classList.contains("active")
-    ) {
+/* -----------------------------------------------------
+   PASO 3: CONFIRMAR Y ABRIR WHATSAPP
+   ----------------------------------------------------- */
+function enviarWhatsApp() {
 
-        cerrarContacto();
+    const numeroWhatsApp = "51981760638";
 
-    }
+    const texto =
+`Hola DARQA Arquitectos.
 
-});
+Quisiera solicitar información y coordinar una reunión para conversar sobre un proyecto.
+
+Quedo atento(a) para coordinar una cita.
+
+Gracias.`;
+
+    const url =
+        "https://wa.me/" +
+        numeroWhatsApp +
+        "?text=" +
+        encodeURIComponent(texto);
+
+    window.location.href = url;
+}
+
+
+
+const nav=document.getElementById("nav");window.addEventListener("scroll",()=>nav&&nav.classList.toggle("scrolled",window.scrollY>40));
+const menuButton=document.querySelector(".menu"),navLinks=document.querySelector(".navlinks");menuButton?.addEventListener("click",()=>navLinks?.classList.toggle("mobile-open"));navLinks?.querySelectorAll("a:not(.nav-project-trigger)").forEach(a=>a.addEventListener("click",()=>navLinks.classList.remove("mobile-open")));
+// Proyectos: al hacer clic solo abre el submenú; NO desplaza ni carga la sección de fondo.
+const projectNav=document.querySelector(".nav-projects"),projectTrigger=document.querySelector(".nav-project-trigger");
+function closeProjectMenu(){if(projectNav){projectNav.classList.remove("open");projectTrigger?.setAttribute("aria-expanded","false")}}
+projectTrigger?.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();const open=projectNav.classList.toggle("open");projectTrigger.setAttribute("aria-expanded",open?"true":"false")});
+document.addEventListener("click",e=>{if(projectNav&&!projectNav.contains(e.target))closeProjectMenu()});
+const filters=[...document.querySelectorAll(".v3-filters .filter")],cards=[...document.querySelectorAll(".v3-card")];
+filters.forEach(b=>b.addEventListener("click",()=>{filters.forEach(x=>x.classList.remove("active"));b.classList.add("active");const f=b.dataset.filter;cards.forEach(c=>c.classList.toggle("hidden",f!=="all"&&c.dataset.category!==f))}));
+const modal=document.getElementById("modal"),mimg=document.getElementById("mimg"),mcat=document.getElementById("mcat"),mtitle=document.getElementById("mtitle"),msub=document.getElementById("msub"),mtype=document.getElementById("mtype");
+cards.forEach(c=>c.addEventListener("click",()=>{mimg.src=c.dataset.img;mtitle.textContent=c.dataset.title;mcat.textContent=c.dataset.category;msub.textContent=c.dataset.sub;mtype.textContent=c.dataset.sub;modal.classList.add("open");document.body.style.overflow="hidden"}));
+function closeModal(){modal.classList.remove("open");document.body.style.overflow=""}document.querySelector(".close")?.addEventListener("click",closeModal);modal?.addEventListener("click",e=>{if(e.target===modal)closeModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.1});document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
+
+
 
 </script>
 

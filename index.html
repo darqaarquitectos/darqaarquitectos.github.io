@@ -13,8 +13,7 @@
 
 <style>
 :root{--yellow:#ffc400;--black:#0b0b0c;--graphite:#171719;--soft:#a8a8ad;--white:#f7f7f5;--line:rgba(255,255,255,.12)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.6}.demo{position:fixed;z-index:1000;top:0;left:0;right:0;background:var(--yellow);color:#111;text-align:center;font-size:12px;font-weight:700;letter-spacing:.08em;padding:7px 12px;text-transform:uppercase}.demo span{font-weight:500;letter-spacing:0;text-transform:none;margin-left:8px}.nav{position:fixed;top:34px;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:18px 5vw;background:rgba(11,11,12,.98);transition:.3s}.nav.scrolled{background:rgba(11,11,12,.98);backdrop-filter:blur(14px)}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}.brand img{width:66px;height:66px;object-fit:cover}.brand b{font-family:Montserrat,sans-serif;font-size:28px;letter-spacing:.18em;font-weight:500}.brand small{display:block;color:#aaa;font-size:11px;letter-spacing:.2em;margin-top:-2px}.navlinks{display:flex;gap:28px}.navlinks a{color:#eee;text-decoration:none;font-size:12px;letter-spacing:.12em;text-transform:uppercase}.navlinks a:hover{color:var(--yellow)}.menu{display:none;border:0;background:none;color:white;font-size:26px}
-.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;position:relative;overflow:hidden}.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:160px 7vw 100px;position:relative;z-index:2}.eyebrow{color:var(--yellow);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:20px}.hero h1{font-family:Montserrat,sans-serif;font-size:clamp(48px,7vw,100px);line-height:.92;font-weight:500;letter-spacing:-.055em;margin:0 0 28px}.hero h1 em{font-style:normal;color:var(--yellow)}.hero p{max-width:600px;color:#c4c4c7;font-size:18px;font-weight:300}.actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}.btn{padding:13px 20px;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:700;border:1px solid #fff;color:#fff;transition:.25s}.btn.primary{background:var(--yellow);border-color:var(--yellow);color:#111}.btn:hover{transform:translateY(-2px)}.hero-image{position:relative;min-height:100vh;background:url('https://images.pexels.com/photos/17779247/pexels-photo-17779247.jpeg?auto=compress&cs=tinysrgb&w=2400') center/cover}.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--black) 0%,rgba(11,11,12,.3) 35%,rgba(11,11,12,.1) 100%),linear-gradient(0deg,rgba(0,0,0,.4),transparent 50%)}.hero-tag{position:absolute;right:5vw;bottom:7vh;z-index:3;border-left:3px solid var(--yellow);padding-left:15px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#ddd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.6}.demo{position:fixed;z-index:1000;top:0;left:0;right:0;background:var(--yellow);color:#111;text-align:center;font-size:12px;font-weight:700;letter-spacing:.08em;padding:7px 12px;text-transform:uppercase}.demo span{font-weight:500;letter-spacing:0;text-transform:none;margin-left:8px}.nav{position:fixed;top:34px;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:18px 5vw;background:rgba(11,11,12,.98);transition:.3s}.nav.scrolled{background:rgba(11,11,12,.98);backdrop-filter:blur(14px)}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}.brand img{width:66px;height:66px;object-fit:cover}.brand b{font-family:Montserrat,sans-serif;font-size:28px;letter-spacing:.18em;font-weight:500}.brand small{display:block;color:#aaa;font-size:11px;letter-spacing:.2em;margin-top:-2px}.navlinks{display:flex;gap:28px}.navlinks a{color:#eee;text-decoration:none;font-size:12px;letter-spacing:.12em;text-transform:uppercase}.navlinks a:hover{color:var(--yellow)}.menu{display:none;border:0;background:none;color:white;font-size:26px}mobile-open.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;position:relative;overflow:hidden}.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:160px 7vw 100px;position:relative;z-index:2}.eyebrow{color:var(--yellow);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:20px}.hero h1{font-family:Montserrat,sans-serif;font-size:clamp(48px,7vw,100px);line-height:.92;font-weight:500;letter-spacing:-.055em;margin:0 0 28px}.hero h1 em{font-style:normal;color:var(--yellow)}.hero p{max-width:600px;color:#c4c4c7;font-size:18px;font-weight:300}.actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}.btn{padding:13px 20px;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:700;border:1px solid #fff;color:#fff;transition:.25s}.btn.primary{background:var(--yellow);border-color:var(--yellow);color:#111}.btn:hover{transform:translateY(-2px)}.hero-image{position:relative;min-height:100vh;background:url('https://images.pexels.com/photos/17779247/pexels-photo-17779247.jpeg?auto=compress&cs=tinysrgb&w=2400') center/cover}.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--black) 0%,rgba(11,11,12,.3) 35%,rgba(11,11,12,.1) 100%),linear-gradient(0deg,rgba(0,0,0,.4),transparent 50%)}.hero-tag{position:absolute;right:5vw;bottom:7vh;z-index:3;border-left:3px solid var(--yellow);padding-left:15px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#ddd}
 .section{padding:110px 7vw}
 
 
@@ -1278,8 +1277,32 @@ document.addEventListener("keydown", function(event) {
 
 });
 
+
+// =====================================================
+// MENÚ HAMBURGUESA - VERSIÓN MÓVIL
+// =====================================================
+
+const menuButton = document.querySelector(".menu");
+const navMenu = document.querySelector(".navlinks");
+
+if (menuButton && navMenu) {
+
+    menuButton.addEventListener("click", function () {
+
+        const abierto = navMenu.classList.toggle("mobile-open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            abierto ? "true" : "false"
+        );
+
+    });
+
+}
+
+
+
 </script>
 
-
-
-</body></html>
+</body>
+</html>

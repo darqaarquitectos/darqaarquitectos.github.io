@@ -534,7 +534,51 @@ html{scroll-behavior:auto!important}
 }
 
 
+/* ===== MENU MOVIL DARQA ===== */
 
+@media (max-width: 768px) {
+
+    .menu {
+        display: block;
+        border: 0;
+        background: none;
+        color: white;
+        font-family: Inter, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        cursor: pointer;
+        padding: 10px 0;
+    }
+
+    .navlinks {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 20px 20px;
+        background: rgba(11, 11, 12, .98);
+        border-top: 1px solid rgba(255,255,255,.12);
+    }
+
+    .navlinks.menu-open {
+        display: flex;
+    }
+
+    .navlinks > a,
+    .navlinks .nav-projects {
+        width: 100%;
+    }
+
+    .navlinks > a {
+        padding: 14px 0;
+        text-align: right;
+    }
+}
 
 
 </style>
@@ -543,8 +587,7 @@ html{scroll-behavior:auto!important}
 <div class="demo">DARQA ARQUITECTOS <span></span></div>
 <header class="nav">
 <a class="brand" href="#inicio"><img alt="DARQA" src="assets/darqa-logo.png"/><div><b>DARQA</b><small>ARQUITECTOS · PROYECTOS · GESTIÓN</small></div></a>
-
-
+<button class="menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰ MENÚ</button>
 <nav class="navlinks">
 <a href="#inicio">Inicio</a>
 <a href="#nosotros">Nosotros</a>

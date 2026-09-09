@@ -1,0 +1,273 @@
+window.DARQA_PROJECTS = [
+  {
+    "id": "che-cha",
+    "nombre": "Ché Chá",
+    "marca": "Ché Chá",
+    "categoria": "Restaurantes",
+    "descripcion": "Un bar de té y cócteles articulado desde una barra central, con una paleta de rosa, terracota y madera cálida que conecta interior y terraza.",
+    "procedencia": "DARQA",
+    "etapa_profesional": "Etapa documentada en portafolio",
+    "destacado": true,
+    "fotografias": [
+      "assets/images/projects/che-cha/01.webp",
+      "assets/images/projects/che-cha/02.webp",
+      "assets/images/projects/che-cha/03.webp",
+      "assets/images/projects/che-cha/04.webp"
+    ],
+    "datos_tecnicos": {
+      "año": "2022",
+      "ubicación": "San Isidro",
+      "área": "160 m²",
+      "tipo": "Restaurante · bar de té y cócteles"
+    },
+    "estado_validacion": "Contenido documental incorporado; procedencia sujeta a revisión final de Alejandra"
+  },
+  {
+    "id": "black-llama",
+    "nombre": "Black Llama",
+    "marca": "Black Llama",
+    "categoria": "Hospitality",
+    "descripcion": "Restauración de una casona colonial organizada alrededor de un patio central techado, integrando arquitectura tradicional y una expresión contemporánea.",
+    "procedencia": "DLM",
+    "etapa_profesional": "DLM Arquitectos",
+    "destacado": true,
+    "fotografias": [
+      "assets/images/projects/black-llama/01.webp",
+      "assets/images/projects/black-llama/02.webp",
+      "assets/images/projects/black-llama/03.webp",
+      "assets/images/projects/black-llama/04.webp"
+    ],
+    "datos_tecnicos": {
+      "año": "2023",
+      "ubicación": "Cusco",
+      "área": "",
+      "tipo": "Hostel boutique"
+    },
+    "estado_validacion": "Contenido documental incorporado; procedencia sujeta a revisión final de Alejandra"
+  },
+  {
+    "id": "la-gloria",
+    "nombre": "La Gloria",
+    "marca": "La Gloria",
+    "categoria": "Bares",
+    "descripcion": "Renovación del bar de La Gloria bajo el concepto Moulin Rouge, recuperando su identidad y dando nueva vida a un restaurante de larga trayectoria.",
+    "procedencia": "DLM",
+    "etapa_profesional": "DLM Arquitectos",
+    "destacado": true,
+    "fotografias": [
+      "assets/images/projects/la-gloria/01.webp",
+      "assets/images/projects/la-gloria/02.webp",
+      "assets/images/projects/la-gloria/03.webp",
+      "assets/images/projects/la-gloria/04.webp"
+    ],
+    "datos_tecnicos": {
+      "año": "2023",
+      "ubicación": "Miraflores",
+      "área": "284,5 m²",
+      "tipo": "Bar"
+    },
+    "estado_validacion": "Contenido documental incorporado; procedencia sujeta a revisión final de Alejandra"
+  },
+  {
+    "id": "embarcadero-41",
+    "nombre": "Embarcadero 41",
+    "marca": "Embarcadero 41",
+    "categoria": "Restaurantes",
+    "descripcion": "",
+    "procedencia": "DLM",
+    "etapa_profesional": "DLM Arquitectos",
+    "destacado": true,
+    "fotografias": [
+      "assets/images/projects/embarcadero-41/01.webp",
+      "assets/images/projects/embarcadero-41/02.webp",
+      "assets/images/projects/embarcadero-41/03.webp",
+      "assets/images/projects/embarcadero-41/04.webp"
+    ],
+    "datos_tecnicos": {
+      "año": "2023",
+      "ubicación": "Santiago de Surco",
+      "área": "838,4 m²",
+      "tipo": "Restaurante"
+    },
+    "estado_validacion": "Contenido documental incorporado; procedencia sujeta a revisión final de Alejandra"
+  },
+  {
+    "id": "casino-bar-bonilla",
+    "nombre": "Casino Bar Bonilla",
+    "marca": "Casino Bar",
+    "categoria": "Bares",
+    "descripcion": "",
+    "procedencia": "DLM",
+    "etapa_profesional": "DLM Arquitectos",
+    "destacado": true,
+    "fotografias": [
+      "assets/images/projects/casino-bar-bonilla/01.webp",
+      "assets/images/projects/casino-bar-bonilla/02.webp",
+      "assets/images/projects/casino-bar-bonilla/03.webp",
+      "assets/images/projects/casino-bar-bonilla/04.webp"
+    ],
+    "datos_tecnicos": {
+      "año": "2022",
+      "ubicación": "Miraflores",
+      "área": "89,1 m²",
+      "tipo": "Bar"
+    },
+    "estado_validacion": "Contenido documental incorporado; procedencia sujeta a revisión final de Alejandra"
+  },
+  {
+    "id": "kokopelli",
+    "nombre": "Kokopelli",
+    "marca": "Kokopelli",
+    "categoria": "Bares",
+    "descripcion": "",
+    "procedencia": "DARQA",
+    "etapa_profesional": "Etapa documentada en portafolio",
+    "destacado": false,
+    "fotografias": [
+      "assets/images/projects/kokopelli/01.webp",
+      "assets/images/projects/kokopelli/02.webp",
+      "assets/images/projects/kokopelli/03.webp",
+      "assets/images/projects/kokopelli/04.webp"
+    ],
+    "datos_tecnicos": {
+      "año": "2022",
+      "ubicación": "Cusco",
+      "área": "261,78 m²",
+      "tipo": "Bar"
+    },
+    "estado_validacion": "Contenido documental incorporado; procedencia sujeta a revisión final de Alejandra"
+  },
+  {
+    "id": "starbucks-grifo-kio",
+    "nombre": "Starbucks Grifo Kio",
+    "marca": "Starbucks",
+    "categoria": "Franquicias",
+    "descripcion": "Primer Starbucks drive-through del Perú, resuelto íntegramente en contenedores marítimos y con una imagen reconocible en formato modular.",
+    "procedencia": "Trayectoria profesional",
+    "etapa_profesional": "Experiencia corporativa documentada",
+    "destacado": false,
+    "fotografias": [
+      "assets/images/projects/starbucks-grifo-kio/01.webp",
+      "assets/images/projects/starbucks-grifo-kio/02.webp",
+      "assets/images/projects/starbucks-grifo-kio/03.webp",
+      "assets/images/projects/starbucks-grifo-kio/04.webp"
+    ],
+    "datos_tecnicos": {
+      "año": "2018",
+      "ubicación": "Lurín",
+      "área": "55 m²",
+      "tipo": "Franquicia"
+    },
+    "estado_validacion": "Contenido documental incorporado; procedencia sujeta a revisión final de Alejandra"
+  },
+  {
+    "id": "starbucks-la-mar",
+    "nombre": "Starbucks La Mar",
+    "marca": "Starbucks",
+    "categoria": "Franquicias",
+    "descripcion": "Proyecto integral de la tienda número 100 de la marca en el Perú, priorizando la experiencia de barra y el recorrido del cliente.",
+    "procedencia": "Trayectoria profesional",
+    "etapa_profesional": "Experiencia corporativa documentada",
+    "destacado": true,
+    "fotografias": [
+      "assets/images/projects/starbucks-la-mar/01.webp",
+      "assets/images/projects/starbucks-la-mar/02.webp",
+      "assets/images/projects/starbucks-la-mar/03.webp",
+      "assets/images/projects/starbucks-la-mar/04.webp"
+    ],
+    "datos_tecnicos": {
+      "año": "2018",
+      "ubicación": "Miraflores",
+      "área": "188 m²",
+      "tipo": "Franquicia"
+    },
+    "estado_validacion": "Contenido documental incorporado; procedencia sujeta a revisión final de Alejandra"
+  },
+  {
+    "id": "kfc-jardines-trujillo",
+    "nombre": "KFC Jardines Trujillo",
+    "marca": "KFC",
+    "categoria": "Franquicias",
+    "descripcion": "",
+    "procedencia": "DARQA",
+    "etapa_profesional": "Etapa documentada en portafolio",
+    "destacado": false,
+    "fotografias": [
+      "assets/images/projects/kfc-jardines-trujillo/01.webp",
+      "assets/images/projects/kfc-jardines-trujillo/02.webp"
+    ],
+    "datos_tecnicos": {
+      "año": "2023",
+      "ubicación": "C.C. Jardines Trujillo",
+      "área": "170 m²",
+      "tipo": "Franquicia"
+    },
+    "estado_validacion": "Contenido documental incorporado; procedencia sujeta a revisión final de Alejandra"
+  },
+  {
+    "id": "chilis-benavides",
+    "nombre": "Chili’s Benavides",
+    "marca": "Chili’s",
+    "categoria": "Franquicias",
+    "descripcion": "",
+    "procedencia": "Trayectoria profesional",
+    "etapa_profesional": "Experiencia documentada",
+    "destacado": false,
+    "fotografias": [
+      "assets/images/projects/chilis-benavides/01.webp",
+      "assets/images/projects/chilis-benavides/02.webp",
+      "assets/images/projects/chilis-benavides/03.webp"
+    ],
+    "datos_tecnicos": {
+      "año": "2018",
+      "ubicación": "Miraflores",
+      "área": "525 m²",
+      "tipo": "Franquicia"
+    },
+    "estado_validacion": "Contenido documental incorporado; procedencia sujeta a revisión final de Alejandra"
+  },
+  {
+    "id": "chilis-plaza-san-miguel",
+    "nombre": "Chili’s Plaza San Miguel",
+    "marca": "Chili’s",
+    "categoria": "Franquicias",
+    "descripcion": "",
+    "procedencia": "DARQA",
+    "etapa_profesional": "Etapa documentada en portafolio",
+    "destacado": false,
+    "fotografias": [
+      "assets/images/projects/chilis-plaza-san-miguel/01.webp",
+      "assets/images/projects/chilis-plaza-san-miguel/02.webp",
+      "assets/images/projects/chilis-plaza-san-miguel/03.webp"
+    ],
+    "datos_tecnicos": {
+      "año": "2023",
+      "ubicación": "San Miguel",
+      "área": "",
+      "tipo": "Franquicia"
+    },
+    "estado_validacion": "Contenido documental incorporado; procedencia sujeta a revisión final de Alejandra"
+  },
+  {
+    "id": "fu-sen-mercado-san-ramon",
+    "nombre": "Fu Sen Mercado San Ramón",
+    "marca": "Fu Sen",
+    "categoria": "Franquicias",
+    "descripcion": "",
+    "procedencia": "DARQA",
+    "etapa_profesional": "Etapa documentada en portafolio",
+    "destacado": false,
+    "fotografias": [
+      "assets/images/projects/fu-sen-mercado-san-ramon/01.webp",
+      "assets/images/projects/fu-sen-mercado-san-ramon/02.webp",
+      "assets/images/projects/fu-sen-mercado-san-ramon/03.webp"
+    ],
+    "datos_tecnicos": {
+      "año": "2021",
+      "ubicación": "Miraflores",
+      "área": "91,24 m²",
+      "tipo": "Franquicia"
+    },
+    "estado_validacion": "Contenido documental incorporado; procedencia sujeta a revisión final de Alejandra"
+  }
+];

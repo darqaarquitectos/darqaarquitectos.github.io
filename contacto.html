@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Contacta a DARQA Arquitectos para presentar tu proyecto de arquitectura, diseño y gestión.">
+<title>Contacto | DARQA Arquitectos</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="DARQA Arquitectos"><img class="brand-logo" src="assets/images/ui/logo-darqa-oficial.jpeg" alt="DARQA Arquitectos"></a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a><a href="darqa.html">DARQA</a><a href="servicios.html">Servicios</a><a href="proyectos.html">Proyectos</a><a href="alejandra.html">Alejandra</a><a href="portafolio-integral.html">Portafolio Integral</a><a class="active" href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <header class="page-hero contact-hero">
+    <div class="container">
+      <span class="eyebrow">Contacto</span>
+      <h1>Hablemos de tu proyecto.</h1>
+      <p>Cuéntanos qué tienes en mente. Con esta información podremos entender mejor tu proyecto y el tipo de apoyo que necesitas de DARQA.</p>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <div class="container contact-grid contact-grid-enhanced">
+      <div class="contact-intro">
+        <span class="eyebrow">Presenta tu proyecto</span>
+        <h2>Arquitectura · Diseño · Gestión</h2>
+        <p>Trabajamos proyectos comerciales y gastronómicos desde la definición de la idea hasta su desarrollo y gestión.</p>
+        <div class="contact-direct">
+          <h3>Contacto directo</h3>
+          <p><strong>Alejandra Maguiña</strong><br>Fundadora y Directora General<br>CAP 17576</p>
+          <p><a href="tel:+51987598119">+51 987 598 119</a><br><a href="mailto:alejandramaguina@darqaarquitectos.com">alejandramaguina@darqaarquitectos.com</a><br>@darqaarquitectos</p>
+        </div>
+        <div class="notice">La información que compartas será utilizada únicamente para conocer tu requerimiento y facilitar el primer contacto.</div>
+      </div>
+
+      <form class="form contact-form-enhanced" id="contact-form" novalidate>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <div class="form-section-title"><span>01</span><strong>Tus datos</strong></div>
+        <div class="form-two">
+          <label>Nombre y apellido<input name="nombre" required maxlength="100" autocomplete="name"></label>
+          <label>Empresa / marca<input name="empresa" maxlength="120" autocomplete="organization"></label>
+        </div>
+        <div class="form-two">
+          <label>Correo electrónico<input type="email" name="correo" required maxlength="160" autocomplete="email"></label>
+          <label>Teléfono / WhatsApp<input type="tel" name="telefono" maxlength="30" autocomplete="tel"></label>
+        </div>
+
+        <div class="form-section-title"><span>02</span><strong>Tu proyecto</strong></div>
+        <div class="form-two">
+          <label>Tipo de proyecto
+            <select name="tipo" required>
+              <option value="Proyecto gastronómico">Restaurante / Gastronomía</option>
+              <option value="Bar">Bar</option>
+              <option value="Retail / Comercial">Retail / Comercial</option>
+              <option value="Franquicia">Franquicia</option>
+              <option value="Hospitality">Hospitality</option>
+              <option value="Interiorismo">Interiorismo</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </label>
+          <label>Etapa actual
+            <select name="etapa" required>
+              <option value="Tengo un local / terreno">Tengo un local / terreno</option>
+              <option value="Estoy buscando local">Estoy buscando local</option>
+              <option value="Tengo una idea y quiero desarrollarla">Tengo una idea y quiero desarrollarla</option>
+              <option value="Ya tengo un proyecto y necesito diseño">Ya tengo un proyecto y necesito diseño</option>
+              <option value="Necesito gestión / ejecución">Necesito gestión / ejecución</option>
+              <option value="Necesito una evaluación inicial">Necesito una evaluación inicial</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-two">
+          <label>Ubicación del proyecto<input name="ubicacion" maxlength="150" placeholder="Ciudad / distrito / país"></label>
+          <label>Área aproximada (m²)<input name="area" inputmode="decimal" maxlength="20" placeholder="Ej. 180"></label>
+        </div>
+        <label>Rango de inversión estimado <span class="optional">Opcional</span>
+          <select name="presupuesto">
+            <option value="Aún no definido">Aún no definido</option>
+            <option>Hasta S/ 100,000</option>
+            <option>S/ 100,000 – 300,000</option>
+            <option>S/ 300,000 – 500,000</option>
+            <option>Más de S/ 500,000</option>
+          </select>
+        </label>
+        <label>Cuéntanos sobre tu proyecto<textarea name="mensaje" required maxlength="1500" placeholder="¿Qué tienes en mente y qué necesitas de DARQA?"></textarea></label>
+        <button class="btn fill contact-submit" type="submit">Enviar mi requerimiento por WhatsApp →</button>
+        <p class="form-helper">Al continuar, se abrirá WhatsApp con tu requerimiento ya preparado para que puedas revisarlo y enviarlo a DARQA.</p>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><h2>Diseñamos negocios que operan tan bien como se ven.</h2><small>DARQA Arquitectos</small></div>
+    <div><span class="eyebrow">Contacto</span><p>+51 987 598 119<br>alejandramaguina@darqaarquitectos.com</p></div>
+    <div><span class="eyebrow">Navegación</span><p><a href="proyectos.html">Proyectos</a><br><a href="servicios.html">Servicios</a><br><a href="contacto.html">Contacto</a></p></div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const f=document.querySelector('#contact-form');
+  const status=document.querySelector('#form-status');
+  const submit=f.querySelector('.contact-submit');
+  const clean=value=>String(value ?? '').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g,'').trim();
+
+  f.addEventListener('submit',e=>{
+    e.preventDefault();
+    status.textContent='';
+
+    if(!f.reportValidity()) return;
+    if(clean(f.elements.website.value)!=='') return;
+
+    const d=new FormData(f);
+    const data={
+      nombre: clean(d.get('nombre')),
+      empresa: clean(d.get('empresa')),
+      correo: clean(d.get('correo')),
+      telefono: clean(d.get('telefono')),
+      tipo: clean(d.get('tipo')),
+      etapa: clean(d.get('etapa')),
+      ubicacion: clean(d.get('ubicacion')),
+      area: clean(d.get('area')),
+      presupuesto: clean(d.get('presupuesto')),
+      mensaje: clean(d.get('mensaje'))
+    };
+
+    if(!data.nombre || !data.correo || !data.mensaje){
+      status.textContent='Por favor completa los campos obligatorios.';
+      return;
+    }
+
+    data.area=data.area.replace(/[^0-9.,\s]/g,'');
+
+    const whatsappNumber='51987598119';
+    const message=[
+      'Hola DARQA, quiero presentar un requerimiento de proyecto.',
+      '',
+      'Nombre: '+data.nombre,
+      'Empresa / marca: '+(data.empresa||'No indicado'),
+      'Correo: '+data.correo,
+      'Teléfono / WhatsApp: '+(data.telefono||'No indicado'),
+      'Tipo de proyecto: '+data.tipo,
+      'Etapa actual: '+data.etapa,
+      'Ubicación: '+(data.ubicacion||'No indicada'),
+      'Área aproximada: '+(data.area||'No indicada')+' m²',
+      'Rango de inversión: '+data.presupuesto,
+      '',
+      'Requerimiento:',
+      data.mensaje
+    ].join('\n');
+
+    const whatsappUrl='https://wa.me/'+whatsappNumber+'?text='+encodeURIComponent(message);
+    if(whatsappUrl.length>8000){
+      status.textContent='El requerimiento es demasiado extenso. Reduce un poco el texto e inténtalo nuevamente.';
+      return;
+    }
+
+    submit.disabled=true;
+    submit.setAttribute('aria-busy','true');
+    status.textContent='Preparando tu requerimiento en WhatsApp…';
+
+    const popup=window.open(whatsappUrl,'_blank','noopener,noreferrer');
+    if(!popup){
+      status.textContent='El navegador bloqueó la apertura de WhatsApp. Permite ventanas emergentes para este sitio e inténtalo nuevamente.';
+      submit.disabled=false;
+      submit.removeAttribute('aria-busy');
+      return;
+    }
+
+    setTimeout(()=>{
+      status.textContent='WhatsApp se abrió con tu requerimiento preparado. Revísalo y pulsa Enviar.';
+      submit.disabled=false;
+      submit.removeAttribute('aria-busy');
+    },600);
+  });
+});
+</script>
+<script src="assets/js/projects-data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

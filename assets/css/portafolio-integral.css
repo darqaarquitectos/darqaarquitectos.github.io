@@ -85,3 +85,25 @@
   .portfolio-page .services .service-icon{width:62px;height:62px;font-size:28px;margin:16px 0 16px}
   .portfolio-page .services .service h3{font-size:24px}
 }
+
+/* ETAPA 14 — Lectura móvil de proyectos destacados */
+@media(max-width:800px){
+  .portfolio-page .featured .project-meta{
+    display:block;
+  }
+  .portfolio-page .featured .project-title{
+    line-height:1.15;
+  }
+  .portfolio-page .featured .project-sub{
+    margin-top:6px;
+    text-align:left;
+    line-height:1.45;
+    white-space:normal;
+  }
+  .portfolio-page .featured .project-desc{
+    width:100%;
+    max-width:none;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+}

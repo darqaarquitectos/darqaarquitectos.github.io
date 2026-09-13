@@ -58,11 +58,11 @@ body.portfolio-viewer-open{overflow:hidden}
   .portfolio-viewer-topbar{height:68px;padding:10px 12px}
   .portfolio-viewer-title strong{font-size:15px}
   .portfolio-viewer-download{display:none}
-  .portfolio-viewer-stage{padding:12px 50px}
-  .portfolio-viewer-frame{max-width:calc(100vw - 70px);max-height:calc(100vh - 125px)}
-  .portfolio-viewer-frame img{max-width:100%;max-height:calc(100vh - 125px)}
-  .portfolio-viewer-arrow{width:42px;height:42px;font-size:34px}
-  .portfolio-viewer-prev{left:7px}.portfolio-viewer-next{right:7px}
-  .portfolio-viewer-bottombar{height:44px;gap:0}
-  .portfolio-viewer-help{display:none}
+  .portfolio-viewer-stage{padding:12px 8px}
+.portfolio-viewer-frame{max-width:calc(100vw - 16px);max-height:calc(100vh - 125px)}
+.portfolio-viewer-frame img{max-width:100%;max-height:calc(100vh - 125px)}
+.portfolio-viewer-arrow{width:40px;height:40px;font-size:32px;background:rgba(20,19,18,.62);border-color:rgba(255,255,255,.42)}
+.portfolio-viewer-prev{left:10px}.portfolio-viewer-next{right:10px}
+.portfolio-viewer-bottombar{height:44px;gap:0}
+.portfolio-viewer-help{display:none}
 }

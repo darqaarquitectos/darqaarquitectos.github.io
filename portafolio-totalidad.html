@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Totalidad de proyectos · Portafolio Integral · DARQA Arquitectos</title>
+<meta name="description" content="Acceso completo a los portafolios de DARQA Arquitectos, con visor página por página y descarga en PDF."/>
+<link href="assets/css/styles.css" rel="stylesheet"/>
+<link href="assets/css/portafolio-integral.css" rel="stylesheet"/>
+<link href="assets/css/portafolio-totalidad.css" rel="stylesheet"/>
+</head>
+<body class="portfolio-page portfolio-totalidad-page">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="portfolio-header">
+  <div class="portfolio-nav wrap">
+    <a aria-label="Portafolio Integral DARQA Arquitectos" class="portfolio-brand" href="portafolio-integral.html"><img alt="DARQA Arquitectos" src="assets/images/ui/logo-darqa-oficial.jpeg"/></a>
+    <nav aria-label="Navegación del Portafolio Integral" class="portfolio-navlinks" id="portfolioNav">
+      <a href="portafolio-integral.html">Destacados</a>
+      <a href="portafolio-trayectoria.html">Trayectoria</a>
+      <a href="portafolio-metodo.html">Método</a>
+      <a href="portafolio-mas-proyectos.html">Más proyectos</a>
+      <a class="active" aria-current="page" href="portafolio-totalidad.html">Totalidad de proyectos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="portfolio-actions">
+      <a class="portfolio-return" href="index.html">← Volver a DARQA</a>
+      <button aria-controls="portfolioNav" aria-expanded="false" aria-label="Abrir menú del portafolio" class="portfolio-menu-toggle" id="portfolioMenuToggle" type="button"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main id="contenido">
+<section class="wrap section portfolio-library-intro">
+  <div class="section-head">
+    <div><div class="section-kicker">05 / Totalidad de proyectos</div><h1>La experiencia completa de DARQA.</h1></div>
+    <p class="intro">Dos documentos para conocer el trabajo, la trayectoria y los proyectos desarrollados por DARQA Arquitectos desde una sola mirada.</p>
+  </div>
+  <div class="portfolio-library-grid">
+    <article class="portfolio-library-card">
+      <div class="portfolio-library-number">01</div>
+      <div class="portfolio-library-copy">
+        <span class="portfolio-library-kicker">Presentación resumida</span>
+        <h2>Portafolio 01</h2>
+        <p>Perfil, propuesta de valor, metodología, trayectoria y una selección de proyectos destacados.</p>
+        <span class="portfolio-library-pages">15 páginas</span>
+      </div>
+      <div class="portfolio-library-actions">
+        <button class="portfolio-btn portfolio-btn-primary" type="button" data-open-portfolio="1">Ver completo <span>→</span></button>
+        <a class="portfolio-btn portfolio-btn-secondary" href="assets/portfolios/pdfs/DARQA_Portafolio_01_Presentacion_Resumen.pdf" download>↓ Descargar PDF</a>
+      </div>
+    </article>
+    <article class="portfolio-library-card">
+      <div class="portfolio-library-number">02</div>
+      <div class="portfolio-library-copy">
+        <span class="portfolio-library-kicker">Portafolio general</span>
+        <h2>Portafolio 02</h2>
+        <p>Portafolio general de proyectos de DARQA Arquitectos, presentado página por página.</p>
+        <span class="portfolio-library-pages">67 páginas · formato A3</span>
+      </div>
+      <div class="portfolio-library-actions">
+        <button class="portfolio-btn portfolio-btn-primary" type="button" data-open-portfolio="2">Ver completo <span>→</span></button>
+        <a class="portfolio-btn portfolio-btn-secondary" href="assets/portfolios/pdfs/DARQA_Portafolio_02_Portafolio_General.pdf" download>↓ Descargar PDF</a>
+      </div>
+    </article>
+  </div>
+  <div class="portfolio-library-combined">
+    <div>
+      <span class="portfolio-library-kicker">Recorrido completo</span>
+      <h2>Ver ambos portafolios</h2>
+      <p>Avanza desde la presentación resumida hasta el portafolio general sin salir del visor.</p>
+    </div>
+    <button class="portfolio-btn portfolio-btn-dark" type="button" data-open-both>Recorrido completo <span>→</span></button>
+  </div>
+  <p class="portfolio-library-note">Los PDFs disponibles para descarga están preparados para una visualización web eficiente y conservan el contenido y la paginación de los documentos fuente.</p>
+</section>
+</main>
+<footer class="wrap footer"><span>DARQA Arquitectos</span><span>Portafolio Integral</span></footer>
+
+<div aria-hidden="true" aria-label="Visor de portafolio" aria-modal="true" class="portfolio-viewer" id="portfolioViewer" role="dialog">
+  <div class="portfolio-viewer-backdrop" data-viewer-close></div>
+  <div class="portfolio-viewer-shell">
+    <header class="portfolio-viewer-topbar">
+      <div class="portfolio-viewer-title">
+        <span class="portfolio-viewer-kicker" id="viewerKicker">Portafolio 01</span>
+        <strong id="viewerTitle">Presentación resumida</strong>
+      </div>
+      <div class="portfolio-viewer-top-actions">
+        <a id="viewerDownload" class="portfolio-viewer-download" href="#" download>↓ Descargar PDF</a>
+        <button aria-label="Cerrar visor" class="portfolio-viewer-close" id="viewerClose" type="button">×</button>
+      </div>
+    </header>
+    <div class="portfolio-viewer-stage" id="viewerStage">
+      <button aria-label="Página anterior" class="portfolio-viewer-arrow portfolio-viewer-prev" id="viewerPrev" type="button">‹</button>
+      <figure class="portfolio-viewer-frame">
+        <img id="viewerImage" alt="Página del portafolio" draggable="false"/>
+      </figure>
+      <button aria-label="Página siguiente" class="portfolio-viewer-arrow portfolio-viewer-next" id="viewerNext" type="button">›</button>
+    </div>
+    <footer class="portfolio-viewer-bottombar">
+      <span id="viewerCounter">1 / 15</span>
+      <span class="portfolio-viewer-help">← → navegar · Esc cerrar · desliza en móvil</span>
+    </footer>
+  </div>
+</div>
+<script src="assets/js/portafolio-totalidad.js"></script>
+</body>
+</html>

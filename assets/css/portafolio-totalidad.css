@@ -1,0 +1,68 @@
+/* ETAPA 15 — Totalidad de proyectos */
+.portfolio-totalidad-page .portfolio-library-intro{padding-bottom:90px}
+.portfolio-totalidad-page .portfolio-library-intro .section-head{align-items:end}
+.portfolio-totalidad-page .portfolio-library-intro h1{font-family:Georgia,serif;font-size:clamp(48px,6vw,82px);font-weight:400;line-height:.95;letter-spacing:-.04em;margin:0}
+.portfolio-totalidad-page .portfolio-library-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.portfolio-totalidad-page .portfolio-library-card{min-height:390px;border:1px solid var(--line);background:#faf9f6;padding:30px;display:flex;flex-direction:column;justify-content:space-between}
+.portfolio-totalidad-page .portfolio-library-number{font-family:Georgia,serif;font-size:62px;line-height:1;color:#d7d1c9;letter-spacing:-.04em}
+.portfolio-totalidad-page .portfolio-library-copy{max-width:560px;padding:20px 0 30px}
+.portfolio-totalidad-page .portfolio-library-kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.portfolio-totalidad-page .portfolio-library-copy h2,.portfolio-totalidad-page .portfolio-library-combined h2{font-family:Georgia,serif;font-size:38px;font-weight:400;line-height:1;margin:12px 0 14px;letter-spacing:-.025em}
+.portfolio-totalidad-page .portfolio-library-copy p,.portfolio-totalidad-page .portfolio-library-combined p{margin:0;color:#625d58;max-width:540px;font-size:15px}
+.portfolio-totalidad-page .portfolio-library-pages{display:block;margin-top:18px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#8a847e}
+.portfolio-totalidad-page .portfolio-library-actions{display:flex;flex-wrap:wrap;gap:10px}
+.portfolio-totalidad-page .portfolio-btn{appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding:12px 17px;border-radius:999px;font:600 10px/1 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;transition:.2s ease;text-decoration:none}
+.portfolio-totalidad-page .portfolio-btn span{font-size:16px;line-height:.7}
+.portfolio-totalidad-page .portfolio-btn-primary{background:#272522;color:#fff}
+.portfolio-totalidad-page .portfolio-btn-primary:hover{transform:translateY(-1px);background:#171615}
+.portfolio-totalidad-page .portfolio-btn-secondary{border:1px solid #c7c1ba;color:#4c4742;background:transparent}
+.portfolio-totalidad-page .portfolio-btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.portfolio-totalidad-page .portfolio-library-combined{margin-top:28px;padding:32px 34px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:30px}
+.portfolio-totalidad-page .portfolio-btn-dark{background:#8b6865;color:#fff;flex:0 0 auto}
+.portfolio-totalidad-page .portfolio-btn-dark:hover{transform:translateY(-1px);filter:brightness(.94)}
+.portfolio-totalidad-page .portfolio-library-note{margin:18px 0 0;color:#8a847e;font-size:12px;line-height:1.6;max-width:760px}
+
+.portfolio-viewer{position:fixed;inset:0;z-index:2000;display:none;background:rgba(17,16,15,.96);color:#fff}
+.portfolio-viewer.is-open{display:block}
+.portfolio-viewer-backdrop{position:absolute;inset:0}
+.portfolio-viewer-shell{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;min-height:0}
+.portfolio-viewer-topbar{height:76px;flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 22px;border-bottom:1px solid rgba(255,255,255,.14);background:rgba(20,19,18,.88)}
+.portfolio-viewer-title{display:flex;flex-direction:column;gap:5px;min-width:0}
+.portfolio-viewer-kicker{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#c9aaa5}
+.portfolio-viewer-title strong{font:400 18px/1.1 Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.portfolio-viewer-top-actions{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.portfolio-viewer-download{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:10px 14px;font:600 9px/1 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.portfolio-viewer-download:hover{border-color:#fff}
+.portfolio-viewer-close{width:44px;height:44px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:transparent;color:#fff;font:300 31px/1 Arial,sans-serif;cursor:pointer}
+.portfolio-viewer-close:hover{background:rgba(255,255,255,.1)}
+.portfolio-viewer-stage{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:18px 82px}
+.portfolio-viewer-frame{margin:0;max-width:calc(100vw - 170px);max-height:calc(100vh - 140px);width:auto;height:auto;display:flex;align-items:center;justify-content:center}
+.portfolio-viewer-frame img{display:block;max-width:100%;max-height:calc(100vh - 140px);width:auto;height:auto;object-fit:contain;box-shadow:0 12px 50px rgba(0,0,0,.38);user-select:none;-webkit-user-drag:none}
+.portfolio-viewer-arrow{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border:1px solid rgba(255,255,255,.32);border-radius:50%;background:rgba(20,19,18,.72);color:#fff;font:300 42px/1 Arial,sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}
+.portfolio-viewer-arrow:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.portfolio-viewer-prev{left:18px}.portfolio-viewer-next{right:18px}
+.portfolio-viewer-bottombar{height:50px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:24px;border-top:1px solid rgba(255,255,255,.14);background:rgba(20,19,18,.88);font-size:11px;color:#ddd}
+.portfolio-viewer-help{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#999}
+body.portfolio-viewer-open{overflow:hidden}
+@media(max-width:800px){
+  .portfolio-totalidad-page .portfolio-library-intro{padding-top:70px;padding-bottom:65px}
+  .portfolio-totalidad-page .portfolio-library-grid{grid-template-columns:1fr;gap:18px}
+  .portfolio-totalidad-page .portfolio-library-card{min-height:0;padding:24px}
+  .portfolio-totalidad-page .portfolio-library-number{font-size:48px}
+  .portfolio-totalidad-page .portfolio-library-copy{padding:18px 0 24px}
+  .portfolio-totalidad-page .portfolio-library-copy h2{font-size:32px}
+  .portfolio-totalidad-page .portfolio-library-actions{flex-direction:column;align-items:stretch}
+  .portfolio-totalidad-page .portfolio-btn{width:100%}
+  .portfolio-totalidad-page .portfolio-library-combined{display:block;padding:26px 0}
+  .portfolio-totalidad-page .portfolio-library-combined .portfolio-btn{margin-top:20px}
+  .portfolio-viewer-topbar{height:68px;padding:10px 12px}
+  .portfolio-viewer-title strong{font-size:15px}
+  .portfolio-viewer-download{display:none}
+  .portfolio-viewer-stage{padding:12px 50px}
+  .portfolio-viewer-frame{max-width:calc(100vw - 70px);max-height:calc(100vh - 125px)}
+  .portfolio-viewer-frame img{max-width:100%;max-height:calc(100vh - 125px)}
+  .portfolio-viewer-arrow{width:42px;height:42px;font-size:34px}
+  .portfolio-viewer-prev{left:7px}.portfolio-viewer-next{right:7px}
+  .portfolio-viewer-bottombar{height:44px;gap:0}
+  .portfolio-viewer-help{display:none}
+}

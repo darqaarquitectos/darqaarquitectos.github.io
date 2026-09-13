@@ -64,5 +64,5 @@ body.portfolio-viewer-open{overflow:hidden}
 .portfolio-viewer-arrow{width:40px;height:40px;font-size:32px;background:rgba(20,19,18,.62);border-color:rgba(255,255,255,.42)}
 .portfolio-viewer-prev{left:10px}.portfolio-viewer-next{right:10px}
 .portfolio-viewer-bottombar{height:44px;gap:0}
-.portfolio-viewer-help{display:none}
+.portfolio-viewer-help{display:block;font-size:9px;letter-spacing:.06em;text-transform:none;color:#999;text-align:center}
 }

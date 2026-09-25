@@ -1,13 +1,25 @@
 /* ETAPA 15 — Totalidad de proyectos */
 .portfolio-totalidad-page .portfolio-library-intro{padding-bottom:90px}
 .portfolio-totalidad-page .portfolio-library-intro .section-head{align-items:end}
-.portfolio-totalidad-page .portfolio-library-intro h1{font-family:Georgia,serif;font-size:clamp(48px,6vw,82px);font-weight:400;line-height:.95;letter-spacing:-.04em;margin:0}
+
+
+.portfolio-totalidad-page .portfolio-library-intro h1{
+    font-family:'Glacial Indifference',Arial,Helvetica,sans-serif;
+font-size:clamp(3rem,5.2vw,5.6rem);
+font-weight:400;
+line-height:.95;
+margin:0}
+    
+
+
 .portfolio-totalidad-page .portfolio-library-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
 .portfolio-totalidad-page .portfolio-library-card{min-height:390px;border:1px solid var(--line);background:#faf9f6;padding:30px;display:flex;flex-direction:column;justify-content:space-between}
-.portfolio-totalidad-page .portfolio-library-number{font-family:Georgia,serif;font-size:62px;line-height:1;color:#d7d1c9;letter-spacing:-.04em}
+
+.portfolio-totalidad-page .portfolio-library-number{font-family:'Glacial Indifference',Arial,Helvetica,sans-serif;font-size:62px;line-height:1;color:#d7d1c9;letter-spacing:-.04em}
+
 .portfolio-totalidad-page .portfolio-library-copy{max-width:560px;padding:20px 0 30px}
 .portfolio-totalidad-page .portfolio-library-kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
-.portfolio-totalidad-page .portfolio-library-copy h2,.portfolio-totalidad-page .portfolio-library-combined h2{font-family:Georgia,serif;font-size:38px;font-weight:400;line-height:1;margin:12px 0 14px;letter-spacing:-.025em}
+.portfolio-totalidad-page .portfolio-library-copy h2,.portfolio-totalidad-page .portfolio-library-combined h2{font-family:'Glacial Indifference',Arial,Helvetica,sans-serif;font-size:38px;font-weight:400;line-height:1;margin:12px 0 14px;letter-spacing:-.025em}
 .portfolio-totalidad-page .portfolio-library-copy p,.portfolio-totalidad-page .portfolio-library-combined p{margin:0;color:#625d58;max-width:540px;font-size:15px}
 .portfolio-totalidad-page .portfolio-library-pages{display:block;margin-top:18px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#8a847e}
 .portfolio-totalidad-page .portfolio-library-actions{display:flex;flex-wrap:wrap;gap:10px}
@@ -18,7 +30,7 @@
 .portfolio-totalidad-page .portfolio-btn-secondary{border:1px solid #c7c1ba;color:#4c4742;background:transparent}
 .portfolio-totalidad-page .portfolio-btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
 .portfolio-totalidad-page .portfolio-library-combined{margin-top:28px;padding:32px 34px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:30px}
-.portfolio-totalidad-page .portfolio-btn-dark{background:#8b6865;color:#fff;flex:0 0 auto}
+.portfolio-totalidad-page .portfolio-btn-dark{background:#A9822E;color:#fff;flex:0 0 auto}
 .portfolio-totalidad-page .portfolio-btn-dark:hover{transform:translateY(-1px);filter:brightness(.94)}
 .portfolio-totalidad-page .portfolio-library-note{margin:18px 0 0;color:#8a847e;font-size:12px;line-height:1.6;max-width:760px}
 
@@ -28,8 +40,11 @@
 .portfolio-viewer-shell{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;min-height:0}
 .portfolio-viewer-topbar{height:76px;flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 22px;border-bottom:1px solid rgba(255,255,255,.14);background:rgba(20,19,18,.88)}
 .portfolio-viewer-title{display:flex;flex-direction:column;gap:5px;min-width:0}
-.portfolio-viewer-kicker{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#c9aaa5}
-.portfolio-viewer-title strong{font:400 18px/1.1 Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.portfolio-viewer-kicker{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#A9822E}
+
+.portfolio-viewer-title strong{font:400 18px/1.1 'Glacial Indifference',Arial,Helvetica,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+
 .portfolio-viewer-top-actions{display:flex;align-items:center;gap:12px;flex:0 0 auto}
 .portfolio-viewer-download{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:10px 14px;font:600 9px/1 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
 .portfolio-viewer-download:hover{border-color:#fff}

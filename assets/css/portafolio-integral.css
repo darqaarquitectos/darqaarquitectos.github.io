@@ -28,7 +28,27 @@
   
   .portfolio-page .closing .big{font-family:'Glacial Indifference',Arial,Helvetica,sans-serif;;font-size:clamp(42px,6vw,80px);font-weight:400;line-height:1;margin:0 auto 30px;max-width:850px}.portfolio-page .closing p{color:var(--muted)}
   
-  .portfolio-page .footer{border-top:1px solid var(--line);padding:25px 0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between}@media(max-width:800px){.portfolio-page .wrap{padding:0 20px}.portfolio-page .nav{height:64px}.portfolio-page .navlinks{display:none}.portfolio-page .hero{grid-template-columns:1fr;min-height:auto;padding:55px 0}.portfolio-page .hero-media{height:58vh}.portfolio-page .section{padding:75px 0}.portfolio-page .section-head{display:block}.portfolio-page .section h2{font-size:40px;margin-top:10px}.portfolio-page .featured{grid-template-columns:1fr;gap:55px}.portfolio-page .project:nth-child(2n) .project-image{height:420px;margin-top:0}.portfolio-page .project-image{height:430px}.portfolio-page .statement{grid-template-columns:1fr;gap:35px;padding:80px 0}.portfolio-page .statement h2{font-size:44px}.portfolio-page .timeline{grid-template-columns:1fr 1fr}.portfolio-page .milestone:nth-child(2){border-right:0}.portfolio-page .services{grid-template-columns:1fr}.portfolio-page .archive{grid-template-columns:1fr}.portfolio-page .footer{display:block;line-height:2}}.portfolio-page .timeline-vertical{position:relative;max-width:980px;margin:44px auto 0;padding-left:42px}.portfolio-page .timeline-vertical::before{content:"";position:absolute;left:10px;top:8px;bottom:8px;width:1px;background:var(--line,#d8d4cd)}.portfolio-page .timeline-vertical .milestone{position:relative;display:grid;grid-template-columns:150px 1fr;gap:32px;padding:0 0 42px;border:0}.portfolio-page .timeline-vertical .milestone:last-child{padding-bottom:8px}.portfolio-page .timeline-vertical .milestone::before{content:"";position:absolute;left:-37px;top:7px;width:11px;height:11px;border:1px solid #A9822E;background:#f5f3ef;border-radius:50%}.portfolio-page .milestone-year{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#A9822E;padding-top:2px}.portfolio-page .milestone-body{display:flex;flex-direction:column;gap:9px;max-width:720px}
+  .portfolio-page .footer {
+  border-top: 1px solid var(--line);
+  padding: 25px 6%;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+    
+    @media(max-width:800px)
+    {
+      
+    .portfolio-page .wrap{padding:0 20px}.portfolio-page .nav{height:64px}
+    .portfolio-page .navlinks{display:none}.portfolio-page .hero{grid-template-columns:
+      1fr;min-height:auto;padding:55px 0}.portfolio-page .hero-media{height:58vh}
+    .portfolio-page .section{padding:75px 0}.portfolio-page .section-head{display:block}
+    .portfolio-page .section h2{font-size:40px;margin-top:10px}.portfolio-page .featured{grid-template-columns:1fr;gap:55px}.portfolio-page .project:nth-child(2n) .project-image{height:420px;margin-top:0}.portfolio-page .project-image{height:430px}.portfolio-page .statement{grid-template-columns:1fr;gap:35px;padding:80px 0}.portfolio-page .statement h2{font-size:44px}.portfolio-page .timeline{grid-template-columns:1fr 1fr}.portfolio-page .milestone:nth-child(2){border-right:0}.portfolio-page .services{grid-template-columns:1fr}.portfolio-page .archive{grid-template-columns:1fr}.portfolio-page .footer{display:block;line-height:2}}.portfolio-page .timeline-vertical{position:relative;max-width:980px;margin:44px auto 0;padding-left:42px}.portfolio-page .timeline-vertical::before{content:"";position:absolute;left:10px;top:8px;bottom:8px;width:1px;background:var(--line,#d8d4cd)}.portfolio-page .timeline-vertical .milestone{position:relative;display:grid;grid-template-columns:150px 1fr;gap:32px;padding:0 0 42px;border:0}.portfolio-page .timeline-vertical .milestone:last-child{padding-bottom:8px}.portfolio-page .timeline-vertical .milestone::before{content:"";position:absolute;left:-37px;top:7px;width:11px;height:11px;border:1px solid #A9822E;background:#f5f3ef;border-radius:50%}.portfolio-page .milestone-year{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#A9822E;padding-top:2px}.portfolio-page .milestone-body{display:flex;flex-direction:column;gap:9px;max-width:720px}
   
   .portfolio-page .milestone-body strong{font-family:'Glacial Indifference',Arial,Helvetica,sans-serif;font-size:1.45rem;font-weight:400;line-height:1.15}
   

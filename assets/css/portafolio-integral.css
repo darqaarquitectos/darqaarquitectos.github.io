@@ -92,7 +92,7 @@
 
 .portfolio-page .portfolio-return:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
 .portfolio-page .portfolio-menu-toggle{display:none;width:44px;height:44px;border:1px solid #bcb6ae;background:transparent;border-radius:50%;padding:10px;cursor:pointer}
-.portfolio-page .portfolio-menu-toggle span{display:block;height:1px;background:#403c38;margin:5px 0;transition:.2s ease}
+.portfolio-page .portfolio-menu-toggle span{display:block;height:1px;background: #A9822E;margin:5px 0;transition:.2s ease}
 .portfolio-page .portfolio-anchor{scroll-margin-top:100px}
 .portfolio-page section[id]{scroll-margin-top:100px}
 @media(max-width:1100px){
@@ -107,7 +107,14 @@
   .portfolio-page .portfolio-menu-toggle{display:block}
   .portfolio-page .portfolio-navlinks{position:absolute;left:20px;right:20px;top:78px;display:none;flex-direction:column;align-items:stretch;gap:0;background:rgba(245,243,239,.99);border:1px solid var(--line);box-shadow:0 18px 35px rgba(30,25,20,.1);padding:8px 18px}
   .portfolio-page .portfolio-navlinks.is-open{display:flex}
-  .portfolio-page .portfolio-navlinks a{padding:14px 0;border-bottom:1px solid #e2ded8}
+  .portfolio-page .portfolio-navlinks a{
+  padding:14px 0;
+  border-bottom:1px solid #e2ded8;
+  color:#1F2422;
+  opacity:1;
+}
+
+
   .portfolio-page .portfolio-navlinks a:last-child{border-bottom:0}
 }
 @media(max-width:520px){

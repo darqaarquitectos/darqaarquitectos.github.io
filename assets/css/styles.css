@@ -24,7 +24,30 @@
 .footer h2{font:400 3rem var(--serif);margin:0 0 25px}
 
 .footer small{color:#aaa}.skip{position:absolute;left:-9999px}.skip:focus{left:10px;top:10px;background:#fff;padding:10px;z-index:100}
-@media(max-width:820px){.brand{height:78px}.brand-logo{height:58px;max-width:66px}.container{width:min(calc(100% - 28px),var(--max))}.menu-toggle{display:block}.nav-links{position:fixed;top:78px;left:0;right:0;background:var(--paper);display:none;flex-direction:column;align-items:stretch;padding:28px;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.nav-links a{padding:10px 0}.section-head,.intro-grid,.bio,.contact-grid,.detail-title{grid-template-columns:1fr}.bio-photo{max-height:620px;max-width:420px}.section-head{gap:15px}.project-card,.project-card:nth-child(3n),.project-card:nth-child(3n+1):not(:first-child){grid-column:span 12}.service{grid-template-columns:45px 1fr}.service p{grid-column:2}.gallery{grid-template-columns:1fr}.gallery figure:nth-child(3n){grid-column:auto;aspect-ratio:4/3}.footer-grid{grid-template-columns:1fr}section{padding:75px 0}.hero{min-height:76vh}.detail-hero{height:55vh}}
+@media(max-width:820px){.brand{height:78px}.brand-logo{height:58px;max-width:66px}.container{width:min(calc(100% - 28px),var(--max))}.menu-toggle{display:block}
+
+.nav-links{
+    position:fixed;
+    top:78px;
+    left:0;
+    right:0;
+    background:var(--paper);
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    padding:28px;
+    gap:12px;
+    max-height:calc(100vh - 78px);
+    overflow-y:auto;
+    border-bottom:1px solid var(--line);
+}
+
+.nav-links.open {
+    display: flex;
+}
+
+
+.section-head,.intro-grid,.bio,.contact-grid,.detail-title{grid-template-columns:1fr}.bio-photo{max-height:620px;max-width:420px}.section-head{gap:15px}.project-card,.project-card:nth-child(3n),.project-card:nth-child(3n+1):not(:first-child){grid-column:span 12}.service{grid-template-columns:45px 1fr}.service p{grid-column:2}.gallery{grid-template-columns:1fr}.gallery figure:nth-child(3n){grid-column:auto;aspect-ratio:4/3}.footer-grid{grid-template-columns:1fr}section{padding:75px 0}.hero{min-height:76vh}.detail-hero{height:55vh}}
 @media(max-width:480px){.facts{grid-template-columns:1fr}.hero h1{font-size:3.4rem}.project-grid{gap:22px}.project-meta{align-items:flex-start}.project-meta h3{font-size:1.45rem}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
@@ -163,5 +186,42 @@ body.project-modal-open{overflow:hidden}
 
     .nav-links a {
         color: #1F2422;
+    }
+}
+
+
+/* Menú hamburguesa móvil: contraste y control circular DARQA */
+@media (max-width: 820px) {
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+        padding: 0;
+        border: 1.5px solid #A9822E;
+        border-radius: 50%;
+        background: transparent;
+        color: #D6AD68;
+        cursor: pointer;
+        flex-shrink: 0;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin: 0;
+        border-radius: 2px;
+        background: #D6AD68;
+    }
+
+    .menu-toggle:focus-visible {
+        outline: 2px solid #D6AD68;
+        outline-offset: 3px;
     }
 }

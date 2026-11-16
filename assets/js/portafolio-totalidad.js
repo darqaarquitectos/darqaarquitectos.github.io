@@ -71,4 +71,30 @@ document.addEventListener('keydown',e=>{
 });
 stage.addEventListener('touchstart',e=>{const t=e.changedTouches[0];touchStartX=t.clientX;touchStartY=t.clientY;},{passive:true});
 stage.addEventListener('touchend',e=>{const t=e.changedTouches[0];const dx=t.clientX-touchStartX;const dy=t.clientY-touchStartY;if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.2)move(dx<0?1:-1);},{passive:true});
+
+
+// Menú hamburguesa del Portafolio Integral
+const portfolioMenuToggle = document.getElementById('portfolioMenuToggle');
+const portfolioNav = document.getElementById('portfolioNav');
+
+if (portfolioMenuToggle && portfolioNav) {
+  portfolioMenuToggle.addEventListener('click', () => {
+    const open = portfolioMenuToggle.getAttribute('aria-expanded') === 'true';
+
+    portfolioMenuToggle.setAttribute('aria-expanded', String(!open));
+    portfolioNav.classList.toggle('is-open', !open);
+  });
+
+  portfolioNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      portfolioMenuToggle.setAttribute('aria-expanded', 'false');
+      portfolioNav.classList.remove('is-open');
+    });
+  });
+}
+
+
+
+
+
 })();
